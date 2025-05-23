@@ -220,7 +220,7 @@
 
         .hero {
             text-align: center;
-            padding: 80px 0;
+            padding: 0px 0;
         }
 
         .hero h1 {
@@ -342,6 +342,148 @@
 
         .feature-link:hover {
             color: var(--text-primary);
+        }
+
+        /* 序号教程部分 */
+        .tutorial-section {
+            margin: 0px 0;
+            padding: 0px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            display: inline-block;
+            padding: 0 20px;
+            background: var(--card-bg);
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            z-index: 0;
+        }
+
+        .tutorial-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .step {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px var(--shadow-color);
+            border: 1px solid var(--border-color);
+            display: flex;
+            gap: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px var(--shadow-color);
+        }
+
+        .step-number {
+            min-width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(58, 134, 255, 0.3);
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .step-content p {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .step-content ul {
+            color: var(--text-secondary);
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .step-content ul li {
+            margin-bottom: 8px;
+        }
+
+        .step-image {
+            flex: 0 0 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px var(--shadow-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .step-image img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .step:hover .step-image img {
+            transform: scale(1.05);
+        }
+
+        .code-block {
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            padding: 15px;
+            font-family: monospace;
+            color: var(--text-primary);
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+
+        .note {
+            background: rgba(255, 215, 0, 0.1);
+            border-left: 4px solid gold;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning {
+            background: rgba(255, 69, 0, 0.1);
+            border-left: 4px solid orangered;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
         }
 
         /* 页脚 */
@@ -533,6 +675,17 @@
                 display: block;
                 z-index: 1000;
             }
+
+            .step {
+                flex-direction: column;
+            }
+
+            .step-image {
+                flex: 0 0 auto;
+                width: 100%;
+                max-width: 100%;
+                margin-top: 20px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -557,6 +710,20 @@
             .features {
                 grid-template-columns: 1fr;
             }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .step-number {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+
+            .step-content h3 {
+                font-size: 1.3rem;
+            }
         }
 
         @media (max-width: 576px) {
@@ -566,6 +733,10 @@
             
             .logo {
                 height: 30px;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -606,50 +777,212 @@
     <main>
         <div class="container">
             <section class="hero">
-                <h1>操作系统 & 软件清单</h1>
-                <p>—— 以坚定的姿态，向流氓软件的阴翳宣战：拒绝捆绑的枷锁、弹窗的侵扰、隐私的窃取。在开源的光辉里，寻觅另一种可能：GitHub 上那些自由生长的代码，如星辰般透明而璀璨。这些代码不属于资本的黑箱，而属于每一个珍视自主权的灵魂。</p>
-                <div class="cta-buttons">
-                    <a href="https://www.jeiii.cn:520" class="btn btn-primary">
-                        <i class="fas fa-server"></i> 主力站点
-                    </a>
-                    <a href="https://jeiii.cn/520" class="btn btn-secondary">
-                        <i class="fas fa-copy"></i> 镜像站点
-                    </a>
-                    <a href="https://jeiii.cn/320" class="btn btn-secondary">
-                        <i class="fas fa-compass"></i> 网址导航
-                    </a>
-                </div>
-                
-                <div class="features">
-                    <a href="page2.html" class="feature-link">
-                        <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-laptop"></i>
-                            </div>
-                            <h3>办公 ></h3>
-                            <p>推荐使用 Github 上的激活脚本，永久激活 Windows 系统及微软的 Office 办公软件。</p>
+                <h1>Windows 办公场景</h1>
+                <p>—— 集成显卡用公版驱动即可；办公软件强烈推荐微软 Office 2024 增强版，输入法用微软自带（不要装能上传输入内容的输入法）；激活工具将不定期从 Github 上转载。</p>
+            </section>
+
+
+            <!-- 新增的序号教程部分 -->
+            <section class="tutorial-section">
+                <div class="tutorial-steps">
+
+
+                    <!-- 步骤1 -->
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3 style="font-weight: normal;">Windows 下载与激活</h3>
+                            <p style="font-weight: 300;">—— 微软官方只给出了最高专业版；其他更高版本（包括停更的）可在下方站点 1 - 5 查询。</p>
+                            <ul>
+                                <ol>
+                                <li style="color: var(--text-secondary); font-weight: 600;">Windows 系统下载：按自身需求和硬件情况选择下载。<br>
+                                   <div class="note" style="margin-top: 8px; margin-bottom: 8px; padding: 8px; background: rgba(75, 192, 192, 0.1); border-left: 4px solid #4bc0c0;">
+                                    <span style="font-weight: 300;">    
+                                    Win 7 - 微软第三方综合：
+                                    站点1 <a href="Download/Windows_download_1.html" target="_blank"><i class="fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a>　
+                                    站点2 <a href="Download/Windows_download_2.html" target="_blank"><i class="fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a>　
+                                    站点3 <a href="Download/Windows_download_3.html" target="_blank"><i class="fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a>　
+                                    站点4 <a href="Download/Windows_download_4.html" target="_blank"><i class="fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a>　
+                                    站点5 <a href="Download/Windows_download_5.html" target="_blank"><i class="fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
+                                    Windows 10 - 官网下载：<a href="Download/Windows_10.html" target="_blank"><i class= "fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
+                                    Windows 11 - 官网下载：<a href="Download/Windows_11.html" target="_blank"><i class= "fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
+                                    </span>
+                                    </div>
+                                <li style="color: var(--text-secondary); font-weight: 600;">Windows KMS/OEM 激活工具<br>
+                                    <div class="note" style="margin-top: 8px; margin-bottom: 8px; padding: 8px; background: rgba(75, 192, 192, 0.1); border-left: 4px solid #ff00002a;">
+                                    <span style="font-weight: 300;"> 
+                                    Win7 激活工具：<a href="Download/KMS_Win7.html" target="_blank"><i class= "fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
+                                    Win10/11、Office 激活工具：<a href="Download/KMS_Win10_11_Office.html" target="_blank"><i class= "fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
+                                    </span>    
+                                    </div>
+                                </li>
+                                </ol>
+                            </ul>
+                                <div class="code-block">
+                                    <li style="color: var(--text-secondary);">
+                                        装机参考：<a href="https://www.mydrivers.com/zhuanti/tianti/cpu" target="_blank" style="color: rgb(117, 100, 65); text-decoration: none;">CPU天梯图</a>、<a href="https://www.mydrivers.com/zhuanti/tianti/gpu" target="_blank" style="color: rgb(117, 100, 65); text-decoration: none;">GPU天梯图</a>、<a href="https://www.expreview.com" target="_blank" style="color: rgb(117, 100, 65); text-decoration: none;">超能网</a><br>
+                                    </li>
+                                    <li style="color: var(--text-secondary);">    
+                                        Win11离线安装（Shift + F10）：<br>
+                                        方法一：taskmgr > 任务管理器 > 结束:OOBENetworkConnectionFlow.exe<br>
+                                        方法二：oobe\bypassnro.cmd > 自动重启
+                                    </li>
+                                    <li style="color: var(--text-secondary);">
+                                        slmgr.vbs -xpr
+                                        <body>
+                                            <button onclick="copyText(event)">点击复制</button>
+                                            <script>
+                                            function copyText(event) {
+                                                const button = event.target;
+                                                const originalText = button.textContent;
+                                                const text = "slmgr.vbs -xpr";
+                                                
+                                                if (!navigator.clipboard) {
+                                                    console.log("您的浏览器不支持剪贴板API");
+                                                    return;
+                                                }
+                                                
+                                                navigator.clipboard.writeText(text)
+                                                    .then(function() {
+                                                        console.log("已复制到剪贴板");
+                                                        button.textContent = "已复制！";
+                                                        setTimeout(() => { button.textContent = originalText; }, 2000);
+                                                    })
+                                                    .catch(function(err) {
+                                                        console.error("复制失败:", err);
+                                                        button.textContent = "复制失败";
+                                                        setTimeout(() => { button.textContent = originalText; }, 2000);
+                                                    });
+                                            }
+                                            </script>
+                                        </body>
+                                        粘贴至命令窗口，以验证 Windows 的激活状态。
+                                    </li>
+                                </div>
                         </div>
-                    </a>
+                    <div class="step-image">
+                        <img src="https://jeiii.cn/img/001.jpg" alt="Windows激活">
+                    </div>
+                    </div>
+
                     
-                    <a href="page3.html" class="feature-link">
-                        <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fa-brands fa-steam"></i>
-                            </div>
-                            <h3>游戏 ></h3>
-                            <p>Windows 安装完成后，忽略显卡的公版驱动；在官网下载驱动时，选择游戏类型；安装完毕修改刷新率至最高。</p>
+                    <!-- 步骤2 -->
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3 style="font-weight: normal;">Windows 优化设置</h3>
+                            <p style="font-weight: 300;">—— 保证系统的原版性，作出最谨慎的优化调整，以获得最佳性能和日常使用习惯。</p>
+                            <ul>
+                            <ol>
+                                <li style="color: var(--text-secondary); font-weight: 600;">偏好设置：<br>
+                                <span style="font-weight: 300;">
+                                    <div class="note" style="margin-top: 8px; margin-bottom: 8px; padding: 8px; background: rgba(75, 192, 192, 0.1); border-left: 4px solid #4bc0c0;">
+                                    桌面：保留（计算机、回收站、控制面板）；使用深色模式；设置5个桌面。<br>
+                                    鼠标：大或特大。<br>
+                                    任务栏：隐藏取消资讯信息。<br>
+                                    Win11开始菜单设为：更多固定项。<br>
+                                    Edge：去广告、侧栏、收藏栏；左键属性设主页两处：jeiii.cn（任务栏、开始菜单）。<br>
+                                </span>
+                                </li>
+                                <li style="color: var(--text-secondary); font-weight: 600;">目录安排：<br>
+                                <span style="font-weight: 300;">
+                                    <div class="note" style="margin-top: 8px; margin-bottom: 8px; padding: 8px; background: rgba(75, 192, 192, 0.1); border-left: 4px solid #ff00002a;">
+                                    目录转移：设置目标文件夹： d:\jeiii\sys　 个人文件转移工具：<a href="Download/Directory_transfer_tool.html" target="_blank"><i class="fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
+                                    安装目录：推荐使用此路径： d:\jeiii\iii　　快捷图标库：<a href="Download/Shortcut_lcon_Library.html" target="_blank"><i class="fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a></span></li>
+                                <li style="color: var(--text-secondary); font-weight: 600;">解压工具：<br>
+                                <span style="font-weight: 300;">
+                                    <div class="note" style="margin-top: 8px; margin-bottom: 8px; padding: 8px; background: rgba(75, 192, 192, 0.1); border-left: 4px solid #4bc0c0;">
+                                    Windows（64位）系统 WinRAR 下载：<a href="Download/WinRAR_64.html" target="_blank"><i class="fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
+                                    Windows（32位）系统 WinRAR 下载：<a href="Download/WinRAR_32.html" target="_blank"><i class="fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
+                                </li>
+                            </ol>
+                            </ul>
                         </div>
-                    </a>
-                    
-                    <a href="page4.html" class="feature-link">
-                        <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-layer-group"></i>
-                            </div>
-                            <h3>更多场景 +</h3>
-                            <p>AI环境配置(Python、Git、VSCode…)；虚拟机搭建；跨平台互动；Win系统防火墙入出站规则管理；Adobe全家桶；系统快照等。</p>
+                        <div class="step-image">
+                            <img src="https://jeiii.cn/img/002.jpg" alt="系统优化">
                         </div>
-                    </a>
+                    </div>
+
+
+                    <!-- 步骤3 -->
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3 style="font-weight: normal;">Microsoft Office 2024 专业增强版及激活</h3>
+                            <p style="font-weight: 300;">—— 用微软 Office 没有广告且无“敏感词检测”；行业标准兼容性最佳、VBA最强。</p>
+                            <ul>
+                            <ol>
+                                <li style="color: var(--text-secondary); font-weight: 600;">部署工具：<br>
+                                <span style="font-weight: 300;">
+                                    <div class="note" style="margin-top: 8px; margin-bottom: 8px; padding: 8px; background: rgba(75, 192, 192, 0.1); border-left: 4px solid #4bc0c0;">
+                                    Office Tool Plus（推荐安装2024专业增强版）：<a href="Download/Office_Tool_Plus.html" target="_blank"><i class="fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
+                                </span>
+                                </li>
+
+                                <li style="color: var(--text-secondary); font-weight: 600;">激活工具：<br>
+                                    <div class="note" style="margin-top: 8px; margin-bottom: 8px; padding: 8px; background: rgba(75, 192, 192, 0.1); border-left: 4px solid #ff00002a;">
+                                    <span style="font-weight: 300;"> 
+                                    Win10/11、Office 激活工具：<a href="Download/KMS_Win10_11_Office.html" target="_blank"><i class= "fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
+                                    </span>    
+                                    </div>
+                                </li>
+                                
+                                <div class="code-block">
+                                    <li style="color: var(--text-secondary);">    
+                                        其他选装：<br>
+                                        Kutools for Excel（Excel 增强插件）：
+                                        软件：<a href="Download/Kutools_for_Excel.html" target="_blank"><i class= "fa-solid fa-download" style="color: rgba(109, 109, 109, 0.377);"></i></a>　
+                                        注册：<a href="Download/Kutools_for_Excel_KEY.html" target="_blank"><i class= "fa-solid fa-keyboard" style="color: rgba(109, 109, 109, 0.377);"></i></a>
+                                        <br>
+                                        如果执意要使用WPS，推荐 WPS Office 2013 个人版：<a href="Download/WPS_2013.html" target="_blank"><i class= "fa-solid fa-download" style="color: rgba(109, 109, 109, 0.377);"></i></a><br>
+                                    </li>
+                                </div>
+
+                            </ol>
+                            </ul>
+                        </div>
+                        <div class="step-image">
+                            <img src="https://jeiii.cn/img/003.jpg" alt="系统优化">
+                        </div>
+                    </div>
+
+
+                    <!-- 步骤4 -->
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3 style="font-weight: normal;">常用软件</h3>
+                            <p style="font-weight: 300;">—— 安装运行环境，配合快捷图标库；把安装软件变绿色软件，跳过注册表写入，更安全。</p>
+                            <ul>
+                            <ol>
+                                <li style="color: var(--text-secondary); font-weight: 600;">运行环境：<br>
+                                <span style="font-weight: 300;">
+                                    <div class="note" style="margin-top: 8px; margin-bottom: 8px; padding: 8px; background: rgba(75, 192, 192, 0.1); border-left: 4px solid #4bc0c0;">
+                                    Visual C++ 运行库合集包轻量版：VisualCppRedist(运行库合集) v90 下载：<a href="Download/VisualCppRedist.html" target="_blank"><i class="fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
+                                <li style="color: var(--text-secondary); font-weight: 600;">常用软件：（绿色版本）<br>
+                                <span style="font-weight: 300;">
+                                    <div class="note" style="margin-top: 8px; margin-bottom: 8px; padding: 8px; background: rgba(75, 192, 192, 0.1); border-left: 4px solid #4bc0c0;">
+                                    微信：<a href="Download/Weixin.html" target="_blank"><i class="fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a>　　
+                                    QQ：<a href="Download/QQ.html" target="_blank"><i class="fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a>　
+                                    <br>
+                                </li>
+                            </ol>
+                            </ul>
+
+                                <div class="code-block">
+                                    <li style="color: var(--text-secondary);">    
+                                        笔记本电脑摄像头，通用驱动下载：
+                                        <a href="Download/Notebook_camera_driver.html" target="_blank"><i class="fa-solid fa-download" style="color: rgba(109, 109, 109, 0.377);"></i></a><br>
+                                    </li>
+                                </div>
+
+                        </div>
+                        <div class="step-image">
+                            <img src="https://jeiii.cn/img/004.jpg" alt="系统优化">
+                        </div>
+                    </div>
+
+
                 </div>
             </section>
         </div>

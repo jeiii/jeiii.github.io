@@ -220,7 +220,7 @@
 
         .hero {
             text-align: center;
-            padding: 80px 0;
+            padding: 0px 0;
         }
 
         .hero h1 {
@@ -342,6 +342,148 @@
 
         .feature-link:hover {
             color: var(--text-primary);
+        }
+
+        /* 序号教程部分 */
+        .tutorial-section {
+            margin: 0px 0;
+            padding: 0px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            display: inline-block;
+            padding: 0 20px;
+            background: var(--card-bg);
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            z-index: 0;
+        }
+
+        .tutorial-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .step {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px var(--shadow-color);
+            border: 1px solid var(--border-color);
+            display: flex;
+            gap: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px var(--shadow-color);
+        }
+
+        .step-number {
+            min-width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(58, 134, 255, 0.3);
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .step-content p {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .step-content ul {
+            color: var(--text-secondary);
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .step-content ul li {
+            margin-bottom: 8px;
+        }
+
+        .step-image {
+            flex: 0 0 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px var(--shadow-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .step-image img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .step:hover .step-image img {
+            transform: scale(1.05);
+        }
+
+        .code-block {
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            padding: 15px;
+            font-family: monospace;
+            color: var(--text-primary);
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+
+        .note {
+            background: rgba(255, 215, 0, 0.1);
+            border-left: 4px solid gold;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .warning {
+            background: rgba(255, 69, 0, 0.1);
+            border-left: 4px solid orangered;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
         }
 
         /* 页脚 */
@@ -533,6 +675,17 @@
                 display: block;
                 z-index: 1000;
             }
+
+            .step {
+                flex-direction: column;
+            }
+
+            .step-image {
+                flex: 0 0 auto;
+                width: 100%;
+                max-width: 100%;
+                margin-top: 20px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -557,6 +710,20 @@
             .features {
                 grid-template-columns: 1fr;
             }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .step-number {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+
+            .step-content h3 {
+                font-size: 1.3rem;
+            }
         }
 
         @media (max-width: 576px) {
@@ -566,6 +733,10 @@
             
             .logo {
                 height: 30px;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -606,50 +777,74 @@
     <main>
         <div class="container">
             <section class="hero">
-                <h1>操作系统 & 软件清单</h1>
-                <p>—— 以坚定的姿态，向流氓软件的阴翳宣战：拒绝捆绑的枷锁、弹窗的侵扰、隐私的窃取。在开源的光辉里，寻觅另一种可能：GitHub 上那些自由生长的代码，如星辰般透明而璀璨。这些代码不属于资本的黑箱，而属于每一个珍视自主权的灵魂。</p>
-                <div class="cta-buttons">
-                    <a href="https://www.jeiii.cn:520" class="btn btn-primary">
-                        <i class="fas fa-server"></i> 主力站点
-                    </a>
-                    <a href="https://jeiii.cn/520" class="btn btn-secondary">
-                        <i class="fas fa-copy"></i> 镜像站点
-                    </a>
-                    <a href="https://jeiii.cn/320" class="btn btn-secondary">
-                        <i class="fas fa-compass"></i> 网址导航
-                    </a>
-                </div>
-                
-                <div class="features">
-                    <a href="page2.html" class="feature-link">
-                        <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-laptop"></i>
-                            </div>
-                            <h3>办公 ></h3>
-                            <p>推荐使用 Github 上的激活脚本，永久激活 Windows 系统及微软的 Office 办公软件。</p>
+                <h1>Windows 更多场景</h1>
+                <p>—— AI绘画、视频生成、声音克隆等，都需要配置运行环境；虚拟机搭建，预调试服务器；本地跨平台互动；想一直免费用某软件，防火墙入出站规则原理得了解一下。</p>
+            </section>
+
+
+            <!-- 新增的序号教程部分 -->
+            <section class="tutorial-section">
+                <div class="tutorial-steps">
+
+
+                    <!-- 步骤6 -->
+                    <div class="step">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h3 style="font-weight: normal;">Windows 办公延伸</h3>
+                            <p style="font-weight: 300;">—— 以文件名找文件，以文本内容找文档；数字文档 PDF/OFD；重命名管理。</p>
+                            <ul>
+                                <ol>
+                                <li style="color: var(--text-secondary); font-weight: 600;">文件、文档搜索命名工具：<br>
+                                   <div class="note" style="margin-top: 8px; margin-bottom: 8px; padding: 8px; background: rgba(75, 192, 192, 0.1); border-left: 4px solid #4bc0c0;">
+                                    <span style="font-weight: 300;">    
+                                    Everything（文件搜索）： 
+                                    <a href="Download/Everything.html" target="_blank"><i class="fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
+                                    Anytxt（文档搜索）：
+                                    <a href="Download/Anytxt.html" target="_blank"><i class= "fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
+                                    ReNamer Pro（文件重命名）：
+                                    <a href="Download/ReNamer_Pro.html" target="_blank"><i class= "fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
+                                    </span>
+                                    </div>
+                                <li style="color: var(--text-secondary); font-weight: 600;">数字文档 PDF/OFD：<br>
+                                    <div class="note" style="margin-top: 8px; margin-bottom: 8px; padding: 8px; background: rgba(75, 192, 192, 0.1); border-left: 4px solid #4bc0d0;">
+                                    <span style="font-weight: 300;"> 
+                                    PDF Shaper 经典版（PDF编辑工具）：
+                                    <a href="Download/PDF_Shaper.html" target="_blank"><i class= "fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
+                                    数科OFD阅读器（国内电子发票专用工具）：
+                                    <a href="Download/OFD.html" target="_blank"><i class= "fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
+                                    </span>    
+                                    </div>
+                                </li>
+                                <li style="color: var(--text-secondary); font-weight: 600;">CAD图纸相关：<br>
+                                    <div class="note" style="margin-top: 8px; margin-bottom: 8px; padding: 8px; background: rgba(75, 192, 192, 0.1); border-left: 4px solid #4bc0d0;">
+                                    <span style="font-weight: 300;"> 
+                                    CADReader 经典版（免升级提示，须配置Win防火墙）：
+                                    <a href="Download/CADReader.html" target="_blank"><i class= "fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
+                                    </span>    
+                                    </div>
+                                </li>
+                                </ol>
+                            </ul>
+                                <div class="code-block">
+                                    <li style="color: var(--text-secondary);">    
+                                        最后更新日期：2025.05.22<br>
+                                    </li>
+                                </div>
                         </div>
-                    </a>
-                    
-                    <a href="page3.html" class="feature-link">
-                        <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fa-brands fa-steam"></i>
-                            </div>
-                            <h3>游戏 ></h3>
-                            <p>Windows 安装完成后，忽略显卡的公版驱动；在官网下载驱动时，选择游戏类型；安装完毕修改刷新率至最高。</p>
-                        </div>
-                    </a>
-                    
-                    <a href="page4.html" class="feature-link">
-                        <div class="feature-card">
-                            <div class="feature-icon">
-                                <i class="fas fa-layer-group"></i>
-                            </div>
-                            <h3>更多场景 +</h3>
-                            <p>AI环境配置(Python、Git、VSCode…)；虚拟机搭建；跨平台互动；Win系统防火墙入出站规则管理；Adobe全家桶；系统快照等。</p>
-                        </div>
-                    </a>
+                    <div class="step-image">
+                        <img src="https://jeiii.cn/img/006.jpg" alt="Windows激活">
+                    </div>
+                    </div>
+
+
+
+
+
+
+
+
+
                 </div>
             </section>
         </div>
