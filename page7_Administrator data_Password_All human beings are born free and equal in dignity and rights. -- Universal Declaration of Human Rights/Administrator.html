@@ -220,7 +220,7 @@
 
         .hero {
             text-align: center;
-            padding: 0px 0;
+            padding: 80px 0;
         }
 
         .hero h1 {
@@ -342,148 +342,6 @@
 
         .feature-link:hover {
             color: var(--text-primary);
-        }
-
-        /* 序号教程部分 */
-        .tutorial-section {
-            margin: 0px 0;
-            padding: 0px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            position: relative;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            display: inline-block;
-            padding: 0 20px;
-            background: var(--card-bg);
-            position: relative;
-            z-index: 1;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            z-index: 0;
-        }
-
-        .tutorial-steps {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        .step {
-            background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 5px 20px var(--shadow-color);
-            border: 1px solid var(--border-color);
-            display: flex;
-            gap: 25px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .step:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px var(--shadow-color);
-        }
-
-        .step-number {
-            min-width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            font-weight: bold;
-            box-shadow: 0 4px 10px rgba(58, 134, 255, 0.3);
-        }
-
-        .step-content {
-            flex: 1;
-        }
-
-        .step-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--primary-color);
-        }
-
-        .step-content p {
-            color: var(--text-secondary);
-            margin-bottom: 15px;
-        }
-
-        .step-content ul {
-            color: var(--text-secondary);
-            padding-left: 20px;
-            margin-bottom: 15px;
-        }
-
-        .step-content ul li {
-            margin-bottom: 8px;
-        }
-
-        .step-image {
-            flex: 0 0 300px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px var(--shadow-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .step-image img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.3s ease;
-        }
-
-        .step:hover .step-image img {
-            transform: scale(1.05);
-        }
-
-        .code-block {
-            background: var(--bg-secondary);
-            border-radius: 8px;
-            padding: 15px;
-            font-family: monospace;
-            color: var(--text-primary);
-            margin: 15px 0;
-            overflow-x: auto;
-        }
-
-        .note {
-            background: rgba(255, 215, 0, 0.1);
-            border-left: 4px solid gold;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .warning {
-            background: rgba(255, 69, 0, 0.1);
-            border-left: 4px solid orangered;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 0 8px 8px 0;
         }
 
         /* 页脚 */
@@ -647,6 +505,142 @@
             transform: translateX(-50%) scale(1);
         }
 
+        /* 表格区域样式 */
+        .content-section {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 30px var(--shadow-color);
+            border: 1px solid var(--border-color);
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+
+        .search-box {
+            flex: 1;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 20px 12px 45px;
+            border-radius: 50px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.2);
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+
+        .table-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .table-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 3px;
+        }
+
+        .software-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 20px var(--shadow-color);
+            border-radius: 10px;
+        }
+
+        .software-table thead tr {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-align: left;
+        }
+
+        .software-table th,
+        .software-table td {
+            padding: 15px;
+        }
+
+        .software-table th {
+            font-weight: 600;
+        }
+
+        .software-table tbody tr {
+            border-bottom: 1px solid var(--border-color);
+            background: var(--card-bg);
+        }
+
+        .software-table tbody tr:nth-child(even) {
+            background: var(--bg-secondary);
+        }
+
+        .software-table tbody tr:last-of-type {
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .software-table tbody tr:hover {
+            background: rgba(58, 134, 255, 0.1);
+        }
+
+        .software-table td:first-child {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .download-btn {
+            padding: 6px 12px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .download-btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px var(--shadow-color);
+        }
+
         /* 响应式设计 */
         @media (max-width: 992px) {
             .hero h1 {
@@ -675,17 +669,6 @@
                 display: block;
                 z-index: 1000;
             }
-
-            .step {
-                flex-direction: column;
-            }
-
-            .step-image {
-                flex: 0 0 auto;
-                width: 100%;
-                max-width: 100%;
-                margin-top: 20px;
-            }
         }
 
         @media (max-width: 768px) {
@@ -711,18 +694,13 @@
                 grid-template-columns: 1fr;
             }
 
-            .section-title h2 {
-                font-size: 2rem;
+            .search-container {
+                flex-direction: column;
             }
 
-            .step-number {
-                width: 50px;
-                height: 50px;
-                font-size: 1.5rem;
-            }
-
-            .step-content h3 {
-                font-size: 1.3rem;
+            .software-table {
+                display: block;
+                overflow-x: auto;
             }
         }
 
@@ -735,8 +713,14 @@
                 height: 30px;
             }
 
-            .section-title h2 {
-                font-size: 1.8rem;
+            .table-title {
+                font-size: 1.5rem;
+            }
+
+            .software-table th,
+            .software-table td {
+                padding: 10px 5px;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -754,13 +738,13 @@
                 </div>
                 
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
-                    <li><a href="page2.html"><i class="fas fa-laptop"></i> 办公</a></li>
-                    <li><a href="page3.html"><i class="fa-brands fa-steam"></i> 游戏</a></li>
-                    <li><a href="page4.html"><i class="fas fa-layer-group"></i> 更多场景</a></li>
-                    <li><a href="page5.html"><i class="fa-solid fa-file-video"></i> 视频教程</a></li>
-                    <li><a href="page6.html"><i class="fa-regular fa-bookmark"></i> 装机用户</a></li>
-                    <li><a href="page7.html"><i class="fas fa-user"></i> 管理员</a></li>
+                    <li><a href="../index.html"><i class="fas fa-home"></i> 首页</a></li>
+                    <li><a href="../page2.html"><i class="fas fa-laptop"></i> 办公</a></li>
+                    <li><a href="../page3.html"><i class="fa-brands fa-steam"></i> 游戏</a></li>
+                    <li><a href="../page4.html"><i class="fas fa-layer-group"></i> 更多场景</a></li>
+                    <li><a href="../page5.html"><i class="fa-solid fa-file-video"></i> 视频教程</a></li>
+                    <li><a href="../page6.html"><i class="fa-regular fa-bookmark"></i> 装机用户</a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> 管理员</a></li>
                 </ul>
                 
                 <div class="nav-actions">
@@ -777,77 +761,58 @@
     
     <main>
         <div class="container">
-            <section class="hero">
-                <h1>Windows 更多场景</h1>
-                <p>—— AI绘画、视频生成、声音克隆等，都需要配置运行环境；虚拟机搭建，预调试服务器；本地跨平台互动；想一直免费用某软件，防火墙入出站规则原理得了解一下。</p>
-            </section>
-
-
-            <!-- 新增的序号教程部分 -->
-            <section class="tutorial-section">
-                <div class="tutorial-steps">
-
-
-                    <!-- 步骤6 -->
-                    <div class="step">
-                        <div class="step-number">6</div>
-                        <div class="step-content">
-                            <h3 style="font-weight: normal;">Windows 办公延伸</h3>
-                            <p style="font-weight: 300;">—— 以文件名找文件，以文本内容找文档；数字文档 PDF/OFD；重命名管理。</p>
-                            <ul>
-                                <ol>
-                                <li style="color: var(--text-secondary); font-weight: 600;">文件、文档搜索命名工具：<br>
-                                   <div class="note" style="margin-top: 8px; margin-bottom: 8px; padding: 8px; background: rgba(75, 192, 192, 0.1); border-left: 4px solid #4bc0c0;">
-                                    <span style="font-weight: 300;">    
-                                    Everything（文件搜索）： 
-                                    <a href="Download/Everything.html" target="_blank"><i class="fa-solid fa-right-to-bracket" style="color: rgb(117, 100, 65);"></i></a><br>
-                                    Anytxt（文档搜索）：
-                                    <a href="Download/Anytxt.html" target="_blank"><i class= "fa-solid fa-right-to-bracket" style="color: rgb(117, 100, 65);"></i></a><br>
-                                    ReNamer Pro（文件重命名）：
-                                    <a href="Download/ReNamer_Pro.html" target="_blank"><i class= "fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
-                                    </span>
-                                    </div>
-                                <li style="color: var(--text-secondary); font-weight: 600;">数字文档 PDF/OFD：<br>
-                                    <div class="note" style="margin-top: 8px; margin-bottom: 8px; padding: 8px; background: rgba(75, 192, 192, 0.1); border-left: 4px solid #4bc0d0;">
-                                    <span style="font-weight: 300;"> 
-                                    PDF Shaper 经典版（PDF编辑工具）：
-                                    <a href="Download/PDF_Shaper.html" target="_blank"><i class= "fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
-                                    数科OFD阅读器（国内电子发票专用工具）：
-                                    <a href="Download/OFD.html" target="_blank"><i class= "fa-solid fa-right-to-bracket" style="color: rgb(117, 100, 65);"></i></a><br>
-                                    </span>    
-                                    </div>
-                                </li>
-                                <li style="color: var(--text-secondary); font-weight: 600;">CAD图纸相关：<br>
-                                    <div class="note" style="margin-top: 8px; margin-bottom: 8px; padding: 8px; background: rgba(75, 192, 192, 0.1); border-left: 4px solid #4bc0d0;">
-                                    <span style="font-weight: 300;"> 
-                                    CADReader 经典版（免升级提示，须配置Win防火墙）：
-                                    <a href="Download/CADReader.html" target="_blank"><i class= "fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
-                                    </span>    
-                                    </div>
-                                </li>
-                                </ol>
-                            </ul>
-                                <div class="code-block">
-                                    <li style="color: var(--text-secondary);">    
-                                        最后更新日期：2025.05.22<br>
-                                    </li>
-                                </div>
-                        </div>
-                    <div class="step-image">
-                        <img src="https://jeiii.cn/img/006.jpg" alt="Windows激活">
+            <div class="content-section">
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="搜索网站...">
                     </div>
-                    </div>
-
-
-
-
-
-
-
-
-
+                    <button class="download-btn" id="exportBtn">
+                        <i class="fa-solid fa-circle-info"></i>
+                    </button>
                 </div>
-            </section>
+                
+                <h2 class="table-title">Windows List Blog —— 背后涉及的所有网站</h2>
+                
+                <table class="software-table">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>网站名称</th>
+                            <th>描述</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Font Awesome</td>
+                            <td>素材工具站：包含丰富图标和样式；本站大部分图标样式均来自于它。</td>
+                            <td><a href="https://fontawesome.com" class="download-btn" target="_blank">进入</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>MDN Web Docs</td>
+                            <td>为开发者提供学习资源和技术支持；本站大部分问题的解决是从此站获得，感谢 Mozilla 公司。</td>
+                            <td><a href="https://developer.mozilla.org" class="download-btn" target="_blank">进入</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>飞书云文档</td>
+                            <td>使用之下的知识库能存20兆以内文件的特点，给小站提供了小软件下载功能，在此感谢飞书。</td>
+                            <td><a href="https://jeiii-cn.feishu.cn/wiki/Rf25w7PntiGeelkgRE8cF2xanGh?fromScene=spaceOverview" class="download-btn" target="_blank">进入</a></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>小飞机网盘</td>
+                            <td>不限速传输、免登录下载、安全加密及灵活分享等优势，成为兼顾效率与实用性的全能型云存储工具。</td>
+                            <td><a href="https://www.feijipan.com" class="download-btn" target="_blank">进入</a></td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
         </div>
     </main>
     
@@ -905,9 +870,9 @@
                 <div class="footer-column">
                     <h3>快速链接</h3>
                     <ul class="footer-links">
-                        <li><a href="page2.html"><i class="fas fa-chevron-right"></i> 办公</a></li>
-                        <li><a href="page3.html"><i class="fas fa-chevron-right"></i> 游戏</a></li>
-                        <li><a href="page4.html"><i class="fas fa-chevron-right"></i> 更多场景</a></li>
+                        <li><a href="../page2.html"><i class="fas fa-chevron-right"></i> 办公</a></li>
+                        <li><a href="../page3.html"><i class="fas fa-chevron-right"></i> 游戏</a></li>
+                        <li><a href="../page4.html"><i class="fas fa-chevron-right"></i> 更多场景</a></li>
                     </ul>
                 </div>
                 
@@ -922,7 +887,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2025 Windows List 操作系统 & 软件清单.　<a href="index.html"><i class="fas fa-external-link-alt"></i> JEIII.CN</a>　保留所有权利.</p>
+                <p>&copy; 2025 Windows List 操作系统 & 软件清单.　<a href="../index.html"><i class="fas fa-external-link-alt"></i> JEIII.CN</a>　保留所有权利.</p>
             </div>
         </div>
     </footer>
@@ -990,6 +955,28 @@
                 container.appendChild(element);
             }
         }
+        
+        // 搜索功能
+        const searchInput = document.getElementById('searchInput');
+        const tableRows = document.querySelectorAll('.software-table tbody tr');
+        
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            
+            tableRows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+        
+        // 导出表格功能
+        document.getElementById('exportBtn').addEventListener('click', () => {
+            alert('—— 站长穷！只能在 Github 上薅羊毛。你认为 html 有后台吗？你认为有就有吧！喜欢这个后台就多停留一会儿，但是亲爱的请明白：这只是个跳转；站长爱所有到店装机的朋友。');
+        });
         
         // 页面加载时创建浮动元素
         window.addEventListener('load', createFloatingElements);
