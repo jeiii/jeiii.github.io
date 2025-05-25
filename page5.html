@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Windows List 操作系统&软件清单</title>
+    <title>Windows List 视频演示</title>
     <!-- 引入字体和图标库 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -218,80 +218,142 @@
             padding-bottom: 50px;
         }
 
-        /* 密码输入区域样式 */
-        .password-section {
+        /* 视频区域样式 */
+        .video-container {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 60vh;
-            text-align: center;
-            padding: 40px 20px;
-            background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .main-video {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 比例 */
             border-radius: 15px;
+            overflow: hidden;
             box-shadow: 0 8px 30px var(--shadow-color);
             border: 1px solid var(--border-color);
-            max-width: 600px;
-            margin: 0 auto;
+            background: var(--card-bg);
         }
 
-        .password-section h1 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .password-section p {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-bottom: 40px;
-            max-width: 500px;
-        }
-
-        .password-form {
-            display: flex;
-            flex-direction: column;
+        .main-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            max-width: 400px;
-            gap: 20px;
-        }
-
-        .password-input {
-            padding: 15px 20px;
-            font-size: 1rem;
-            border: 2px solid var(--border-color);
-            border-radius: 50px;
-            background: var(--bg-secondary);
-            color: var(--text-primary);
-            outline: none;
-            transition: all 0.3s ease;
-        }
-
-        .password-input:focus {
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.2);
-        }
-
-        .password-btn {
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
+            height: 100%;
             border: none;
+        }
+
+        /* 新的轮播样式 */
+        .video-carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .video-carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .video-thumbnail {
+            flex: 0 0 25%;
+            padding: 0 10px;
+            box-sizing: border-box;
+            height: 170px;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px var(--shadow-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .video-thumbnail:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px var(--shadow-color);
+        }
+
+        .video-thumbnail iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-thumbnail::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            transition: background 0.3s ease;
+        }
+
+        .video-thumbnail:hover::after {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--text-secondary);
+            opacity: 0.5;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(58, 134, 255, 0.3);
         }
 
-        .password-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(58, 134, 255, 0.4);
+        .carousel-dot.active {
+            background-color: var(--primary-color);
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: var(--card-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 10px var(--shadow-color);
+            border: 1px solid var(--border-color);
+            z-index: 10;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-arrow:hover {
+            opacity: 1;
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .carousel-arrow.prev {
+            left: 10px;
+        }
+
+        .carousel-arrow.next {
+            right: 10px;
         }
 
         /* 页脚 */
@@ -479,15 +541,16 @@
                 display: block;
                 z-index: 1000;
             }
+
+            .video-thumbnail {
+                flex: 0 0 33.33%;
+            }
         }
 
         @media (max-width: 768px) {
-            .password-section h1 {
-                font-size: 2rem;
-            }
-            
-            .password-section p {
-                font-size: 1rem;
+            .video-thumbnail {
+                flex: 0 0 50%;
+                height: 140px;
             }
         }
 
@@ -500,12 +563,15 @@
                 height: 30px;
             }
             
-            .password-section {
-                padding: 30px 15px;
+            .video-thumbnail {
+                flex: 0 0 100%;
+                height: 110px;
             }
-            
-            .password-form {
-                gap: 15px;
+
+            .carousel-arrow {
+                width: 30px;
+                height: 30px;
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -527,7 +593,7 @@
                     <li><a href="page2.html"><i class="fas fa-laptop"></i> 办公</a></li>
                     <li><a href="page3.html"><i class="fa-brands fa-steam"></i> 游戏</a></li>
                     <li><a href="page4.html"><i class="fas fa-layer-group"></i> 更多场景</a></li>
-                    <li><a href="page5.html"><i class="fa-solid fa-file-video"></i> 视频教程</a></li>
+                    <li><a href="page5.html"><i class="fa-solid fa-file-video"></i> 视频演示</a></li>
                     <li><a href="page6.html"><i class="fa-regular fa-bookmark"></i> 装机用户</a></li>
                     <li><a href="page7.html"><i class="fas fa-user"></i> 管理员</a></li>
                 </ul>
@@ -545,16 +611,51 @@
     </header>
     
     <main>
-        <div class="container">
-            <section class="password-section">
-                <h1>请输入访问密码</h1>
-                <p>本页面内容仅供授权用户访问，请输入正确的密码继续</p>
+        <div class="video-container">
+            <!-- 主视频区域 -->
+            <div class="main-video">
+                <iframe id="mainVideoPlayer" src="https://player.bilibili.com/player.html?isOutside=true&aid=114567011107130&bvid=BV15KjMzuE1k&cid=30140924266&p=1" 
+                        scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true" 
+                        allow="autoplay; fullscreen"></iframe>
+            </div>
+            
+            <!-- 视频轮播区域 -->
+            <div class="video-carousel-container">
+                <div class="carousel-arrow prev" onclick="moveCarousel(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="carousel-arrow next" onclick="moveCarousel(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
                 
-                <form class="password-form" onsubmit="checkPassword(event)">
-                    <input type="password" class="password-input" id="passwordInput" placeholder="输入访问密码" required>
-                    <button type="submit" class="password-btn">进入系统</button>
-                </form>
-            </section>
+                <div class="video-carousel" id="videoCarousel">
+                    
+                    <div class="video-thumbnail" onclick="changeVideo('15KjMzuE1k')">   <!-- 金戈备注：这里的BV号是下方 “从BV开始至&结束” 的字符。 -->
+                        <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=114567011107130&bvid=BV15KjMzuE1k&cid=30140924266&p=0" 
+                                scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                    </div>
+                    
+                    <div class="video-thumbnail" onclick="changeVideo('15KjMzuE1k')">   <!-- 金戈备注：这里的BV号是下方 “从BV开始至&结束” 的字符。 -->
+                        <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=114567011107130&bvid=BV15KjMzuE1k&cid=30140924266&p=0" 
+                                scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                    </div>
+
+                    <div class="video-thumbnail" onclick="changeVideo('15KjMzuE1k')">   <!-- 金戈备注：这里的BV号是下方 “从BV开始至&结束” 的字符。 -->
+                        <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=114567011107130&bvid=BV15KjMzuE1k&cid=30140924266&p=0" 
+                                scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                    </div>
+                    
+                    <div class="video-thumbnail" onclick="changeVideo('15KjMzuE1k')">   <!-- 金戈备注：这里的BV号是下方 “从BV开始至&结束” 的字符。 -->
+                        <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=114567011107130&bvid=BV15KjMzuE1k&cid=30140924266&p=0" 
+                                scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                    </div>                    
+
+                </div>
+                
+                <div class="carousel-nav" id="carouselNav">
+                    <!-- 导航点将通过JS动态生成 -->
+                </div>
+            </div>
         </div>
     </main>
     
@@ -666,21 +767,6 @@
             themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
         }
         
-        // 密码验证函数
-        function checkPassword(event) {
-            event.preventDefault();
-            const password = document.getElementById('passwordInput').value;
-            
-            // 这里设置你的密码，例如 "secret123"
-            if (password === "secret123") {
-                // 密码正确，重定向到指定页面
-                window.location.href = "page2.html"; // 修改为你想要跳转的页面
-            } else {
-                alert("密码错误，请重试！");
-                document.getElementById('passwordInput').value = '';
-            }
-        }
-        
         // 创建浮动元素
         function createFloatingElements() {
             const container = document.getElementById('floatingElements');
@@ -713,8 +799,80 @@
             }
         }
         
-        // 页面加载时创建浮动元素
-        window.addEventListener('load', createFloatingElements);
+        // 切换视频函数
+        function changeVideo(bvid) {
+            const mainPlayer = document.getElementById('mainVideoPlayer');
+            mainPlayer.src = `https://player.bilibili.com/player.html?bvid=${bvid}&autoplay=true&high_quality=1`;
+        }
+        
+        // 轮播图功能
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.video-thumbnail');
+        const totalSlides = slides.length;
+        const carousel = document.getElementById('videoCarousel');
+        const carouselNav = document.getElementById('carouselNav');
+        
+        // 创建导航点
+        function createNavDots() {
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('carousel-dot');
+                if (i === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(i));
+                carouselNav.appendChild(dot);
+            }
+        }
+        
+        // 跳转到指定幻灯片
+        function goToSlide(index) {
+            currentSlide = (index + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+        
+        // 移动轮播图
+        function moveCarousel(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+        
+        // 更新轮播图状态
+        function updateCarousel() {
+            const slideWidth = 100 / (window.innerWidth < 768 ? (window.innerWidth < 576 ? 1 : 2) : 4);
+            carousel.style.transform = `translateX(-${currentSlide * slideWidth}%)`;
+            
+            // 更新导航点状态
+            const dots = document.querySelectorAll('.carousel-dot');
+            dots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+        
+        // 自动轮播
+        let autoCarousel = setInterval(() => moveCarousel(1), 5000);
+        
+        // 鼠标悬停时暂停自动轮播
+        document.querySelector('.video-carousel-container').addEventListener('mouseenter', () => {
+            clearInterval(autoCarousel);
+        });
+        
+        // 鼠标离开时恢复自动轮播
+        document.querySelector('.video-carousel-container').addEventListener('mouseleave', () => {
+            autoCarousel = setInterval(() => moveCarousel(1), 5000);
+        });
+        
+        // 响应式调整
+        window.addEventListener('resize', updateCarousel);
+        
+        // 页面加载时创建浮动元素和初始化轮播
+        window.addEventListener('load', () => {
+            createFloatingElements();
+            createNavDots();
+            updateCarousel();
+        });
     </script>
 </body>
 </html>
