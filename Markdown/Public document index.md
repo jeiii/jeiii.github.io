@@ -1,11 +1,11 @@
-# Windows List Blog
+# JEIII WinList Blog
 
-![Banner Image](https://via.placeholder.com/800x200?text=Windows+List+Blog)
+![Banner Image](https://jeiii.cn/img/001.jpg/800x200?text=Windows+List+Blog)
 
 ## 欢迎来到我们的技术天地
 
 > "博客所涉内容自行甄别，软件均来自网络，仅供学习测试使用。"  
-> —— Windows List Blog
+> —— JEIII WinList Blog
 
 ---
 
