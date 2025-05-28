@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WinList List - 视频演示</title>
     <!-- 引入字体和图标库 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             /* 浅色主题变量 */
@@ -49,8 +51,8 @@
 
         body {
             font-family: 'Noto Sans SC', sans-serif;
-            background: linear-gradient(var(--overlay-color), var(--overlay-color)), 
-                        url('https://jeiii.cn/img/030.jpg') no-repeat center center fixed;
+            background: linear-gradient(var(--overlay-color), var(--overlay-color)),
+                url('https://jeiii.cn/img/030.jpg') no-repeat center center fixed;
             background-size: cover;
             color: var(--text-primary);
             min-height: 100vh;
@@ -85,9 +87,11 @@
                 transform: translateY(100vh) scale(0.5);
                 opacity: 0;
             }
+
             10% {
                 opacity: 0.6;
             }
+
             100% {
                 transform: translateY(-100px) scale(1);
                 opacity: 0;
@@ -231,7 +235,8 @@
         .main-video {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 比例 */
+            padding-bottom: 56.25%;
+            /* 16:9 比例 */
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 8px 30px var(--shadow-color);
@@ -532,11 +537,11 @@
                 transition: right 0.3s ease;
                 z-index: 999;
             }
-            
+
             .nav-links.active {
                 right: 0;
             }
-            
+
             .mobile-menu-btn {
                 display: block;
                 z-index: 1000;
@@ -558,11 +563,11 @@
             .brand-name {
                 font-size: 1.2rem;
             }
-            
+
             .logo {
                 height: 30px;
             }
-            
+
             .video-thumbnail {
                 flex: 0 0 100%;
                 height: 110px;
@@ -576,10 +581,11 @@
         }
     </style>
 </head>
+
 <body>
     <!-- 浮动背景元素 -->
     <div class="floating-elements" id="floatingElements"></div>
-    
+
     <header>
         <div class="container">
             <nav>
@@ -587,18 +593,19 @@
                     <img src="https://jeiii.cn/img/logo/jeiii01.png" alt="Windows list 操作系统&软件清单" class="logo">
                     <span class="brand-name">WinList Blog</span>
                 </div>
-                
+
                 <ul class="nav-links" id="navLinks">
                     <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
                     <li><a href="page2.html"><i class="fas fa-laptop"></i> 办公</a></li>
                     <li><a href="page3.html"><i class="fa-brands fa-steam"></i> 游戏</a></li>
                     <li><a href="page4.html"><i class="fas fa-layer-group"></i> 更多场景</a></li>
                     <li><a href="page5.html"><i class="fa-solid fa-file-video"></i> 演示</a></li>
-                    <li><a href="/template_1.html?md=/Markdown/Public%20document%20index.md"><i class="fa-brands fa-markdown"></i> 文档</a></li>
+                    <li><a href="/template_1.html?md=/Markdown/Public%20document%20index.md"><i
+                                class="fa-brands fa-markdown"></i> 文档</a></li>
                     <li><a href="page6.html"><i class="fa-regular fa-bookmark"></i> 装机用户</a></li>
                     <li><a href="page7.html"><i class="fas fa-user"></i> 管理员</a></li>
                 </ul>
-                
+
                 <div class="nav-actions">
                     <button class="theme-toggle" id="themeToggle">
                         <i class="fas fa-moon"></i>
@@ -610,16 +617,17 @@
             </nav>
         </div>
     </header>
-    
+
     <main>
         <div class="video-container">
             <!-- 主视频区域 -->
             <div class="main-video">
-                <iframe id="mainVideoPlayer" src="https://player.bilibili.com/player.html?isOutside=true&aid=114567011107130&bvid=BV15KjMzuE1k&cid=30140924266&p=1" 
-                        scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true" 
-                        allow="autoplay; fullscreen"></iframe>
+                <iframe id="mainVideoPlayer"
+                    src="https://player.bilibili.com/player.html?isOutside=true&aid=114567011107130&bvid=BV15KjMzuE1k&cid=30140924266&p=1"
+                    scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"
+                    allow="autoplay; fullscreen"></iframe>
             </div>
-            
+
             <!-- 视频轮播区域 -->
             <div class="video-carousel-container">
                 <div class="carousel-arrow prev" onclick="moveCarousel(-1)">
@@ -628,38 +636,46 @@
                 <div class="carousel-arrow next" onclick="moveCarousel(1)">
                     <i class="fas fa-chevron-right"></i>
                 </div>
-                
+
                 <div class="video-carousel" id="videoCarousel">
-                    
-                    <div class="video-thumbnail" onclick="changeVideo('15KjMzuE1k')">   <!-- 金戈备注：这里的BV号是下方 “从BV开始至&结束” 的字符。 -->
-                        <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=114567011107130&bvid=BV15KjMzuE1k&cid=30140924266&p=0" 
-                                scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-                    </div>
-                    
-                    <div class="video-thumbnail" onclick="changeVideo('1w14y1C7oi')">   <!-- 金戈备注：这里的BV号是下方 “从BV开始至&结束” 的字符。 -->
-                        <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=788176714&bvid=BV1w14y1C7oi&cid=1261130759&p=0" 
-                                scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+                    <div class="video-thumbnail" onclick="changeVideo('15KjMzuE1k')">
+                        <!-- 金戈备注：这里的BV号是下方 “从BV开始至&结束” 的字符。 -->
+                        <iframe
+                            src="https://player.bilibili.com/player.html?isOutside=true&aid=114567011107130&bvid=BV15KjMzuE1k&cid=30140924266&p=0"
+                            scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
                     </div>
 
-                    <div class="video-thumbnail" onclick="changeVideo('15KjMzuE1k')">   <!-- 金戈备注：这里的BV号是下方 “从BV开始至&结束” 的字符。 -->
-                        <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=114567011107130&bvid=BV15KjMzuE1k&cid=30140924266&p=0" 
-                                scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                    <div class="video-thumbnail" onclick="changeVideo('1w14y1C7oi')">
+                        <!-- 金戈备注：这里的BV号是下方 “从BV开始至&结束” 的字符。 -->
+                        <iframe
+                            src="https://player.bilibili.com/player.html?isOutside=true&aid=788176714&bvid=BV1w14y1C7oi&cid=1261130759&p=0"
+                            scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
                     </div>
-                    
-                    <div class="video-thumbnail" onclick="changeVideo('15KjMzuE1k')">   <!-- 金戈备注：这里的BV号是下方 “从BV开始至&结束” 的字符。 -->
-                        <iframe src="https://player.bilibili.com/player.html?isOutside=true&aid=114567011107130&bvid=BV15KjMzuE1k&cid=30140924266&p=0" 
-                                scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-                    </div>                    
+
+                    <div class="video-thumbnail" onclick="changeVideo('15KjMzuE1k')">
+                        <!-- 金戈备注：这里的BV号是下方 “从BV开始至&结束” 的字符。 -->
+                        <iframe
+                            src="https://player.bilibili.com/player.html?isOutside=true&aid=114567011107130&bvid=BV15KjMzuE1k&cid=30140924266&p=0"
+                            scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                    </div>
+
+                    <div class="video-thumbnail" onclick="changeVideo('15KjMzuE1k')">
+                        <!-- 金戈备注：这里的BV号是下方 “从BV开始至&结束” 的字符。 -->
+                        <iframe
+                            src="https://player.bilibili.com/player.html?isOutside=true&aid=114567011107130&bvid=BV15KjMzuE1k&cid=30140924266&p=0"
+                            scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                    </div>
 
                 </div>
-                
+
                 <div class="carousel-nav" id="carouselNav">
                     <!-- 导航点将通过JS动态生成 -->
                 </div>
             </div>
         </div>
     </main>
-    
+
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -690,7 +706,7 @@
                                 <img src="https://jeiii.cn/img/other/bilibili.png" alt="B站二维码">
                                 <span></span>
                             </div>
-                        </div>  
+                        </div>
 
                         <div class="wechat-container">
                             <a href="#"><i class="fa-brands fa-tiktok"></i></a>
@@ -698,11 +714,11 @@
                                 <img src="https://jeiii.cn/img/other/tiktok.png" alt="tiktok二维码">
                                 <span></span>
                             </div>
-                        </div>                         
+                        </div>
 
                     </div>
                 </div>
-                
+
                 <div class="footer-column">
                     <h3>快速链接</h3>
                     <ul class="footer-links">
@@ -711,7 +727,7 @@
                         <li><a href="page4.html"><i class="fas fa-chevron-right"></i> 更多场景</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-column">
                     <h3>联系我们</h3>
                     <ul class="footer-links">
@@ -721,30 +737,31 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="copyright">
-                <p>&copy; 2025 JEIII WinList Blog 操作系统 & 软件清单.　<a href="index.html"><i class="fas fa-external-link-alt"></i> JEIII.CN</a>　保留所有权利.</p>
+                <p>&copy; 2025 JEIII WinList Blog 操作系统 & 软件清单.　<a href="index.html"><i
+                            class="fas fa-external-link-alt"></i> JEIII.CN</a>　保留所有权利.</p>
             </div>
         </div>
     </footer>
-    
+
     <script>
         // 移动菜单切换
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navLinks = document.getElementById('navLinks');
-        
+
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ?
                 '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
         });
-        
+
         // 主题切换
         const themeToggle = document.getElementById('themeToggle');
-        
+
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
-            
+
             if (document.body.classList.contains('dark-mode')) {
                 themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
                 localStorage.setItem('theme', 'dark');
@@ -753,58 +770,58 @@
                 localStorage.setItem('theme', 'light');
             }
         });
-        
+
         // 检查本地存储中的主题偏好
         if (localStorage.getItem('theme') === 'dark') {
             document.body.classList.add('dark-mode');
             themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
         }
-        
+
         // 创建浮动元素
         function createFloatingElements() {
             const container = document.getElementById('floatingElements');
             const elementCount = 15;
             const colors = ['#3a86ff', '#8338ec', '#ff006e', '#fb5607', '#ffbe0b'];
-            
+
             for (let i = 0; i < elementCount; i++) {
                 const element = document.createElement('div');
                 element.classList.add('floating-element');
-                
+
                 // 随机大小
                 const size = Math.random() * 20 + 10;
                 element.style.width = `${size}px`;
                 element.style.height = `${size}px`;
-                
+
                 // 随机位置
                 element.style.left = `${Math.random() * 100}%`;
-                
+
                 // 随机动画时长
                 const duration = Math.random() * 20 + 10;
                 element.style.animationDuration = `${duration}s`;
-                
+
                 // 随机延迟
                 element.style.animationDelay = `${Math.random() * 10}s`;
-                
+
                 // 随机颜色
                 element.style.background = colors[Math.floor(Math.random() * colors.length)];
-                
+
                 container.appendChild(element);
             }
         }
-        
+
         // 切换视频函数
         function changeVideo(bvid) {
             const mainPlayer = document.getElementById('mainVideoPlayer');
             mainPlayer.src = `https://player.bilibili.com/player.html?bvid=${bvid}&autoplay=true&high_quality=1`;
         }
-        
+
         // 轮播图功能
         let currentSlide = 0;
         const slides = document.querySelectorAll('.video-thumbnail');
         const totalSlides = slides.length;
         const carousel = document.getElementById('videoCarousel');
         const carouselNav = document.getElementById('carouselNav');
-        
+
         // 创建导航点
         function createNavDots() {
             for (let i = 0; i < totalSlides; i++) {
@@ -815,24 +832,24 @@
                 carouselNav.appendChild(dot);
             }
         }
-        
+
         // 跳转到指定幻灯片
         function goToSlide(index) {
             currentSlide = (index + totalSlides) % totalSlides;
             updateCarousel();
         }
-        
+
         // 移动轮播图
         function moveCarousel(direction) {
             currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
             updateCarousel();
         }
-        
+
         // 更新轮播图状态
         function updateCarousel() {
             const slideWidth = 100 / (window.innerWidth < 768 ? (window.innerWidth < 576 ? 1 : 2) : 4);
             carousel.style.transform = `translateX(-${currentSlide * slideWidth}%)`;
-            
+
             // 更新导航点状态
             const dots = document.querySelectorAll('.carousel-dot');
             dots.forEach((dot, index) => {
@@ -843,23 +860,23 @@
                 }
             });
         }
-        
+
         // 自动轮播
         let autoCarousel = setInterval(() => moveCarousel(1), 5000);
-        
+
         // 鼠标悬停时暂停自动轮播
         document.querySelector('.video-carousel-container').addEventListener('mouseenter', () => {
             clearInterval(autoCarousel);
         });
-        
+
         // 鼠标离开时恢复自动轮播
         document.querySelector('.video-carousel-container').addEventListener('mouseleave', () => {
             autoCarousel = setInterval(() => moveCarousel(1), 5000);
         });
-        
+
         // 响应式调整
         window.addEventListener('resize', updateCarousel);
-        
+
         // 页面加载时创建浮动元素和初始化轮播
         window.addEventListener('load', () => {
             createFloatingElements();
@@ -868,4 +885,5 @@
         });
     </script>
 </body>
+
 </html>
