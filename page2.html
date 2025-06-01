@@ -830,44 +830,16 @@
                                         方法二：oobe\bypassnro.cmd > 自动重启
                                     </li>
                                     <li style="color: var(--text-secondary);">
-                                        slmgr.vbs -xpr
-                                        <body>
-                                            <button onclick="copyText(event)">点击复制</button>
-                                            <script>
-                                            function copyText(event) {
-                                                const button = event.target;
-                                                const originalText = button.textContent;
-                                                const text = "slmgr.vbs -xpr";
-                                                
-                                                if (!navigator.clipboard) {
-                                                    console.log("您的浏览器不支持剪贴板API");
-                                                    return;
-                                                }
-                                                
-                                                navigator.clipboard.writeText(text)
-                                                    .then(function() {
-                                                        console.log("已复制到剪贴板");
-                                                        button.textContent = "已复制！";
-                                                        setTimeout(() => { button.textContent = originalText; }, 2000);
-                                                    })
-                                                    .catch(function(err) {
-                                                        console.error("复制失败:", err);
-                                                        button.textContent = "复制失败";
-                                                        setTimeout(() => { button.textContent = originalText; }, 2000);
-                                                    });
-                                            }
-                                            </script>
-                                        </body>
-                                        粘贴至命令窗口，以验证 Windows 的激活状态。
+                                    <span class="copyable-text" data-text="slmgr.vbs -xpr" style="cursor: pointer; color: var(--primary-color); font-weight: 500;">slmgr.vbs -xpr</span> 粘贴至命令窗口，以验证 Windows 的激活状态。
                                     </li>
                                 </div>
                         </div>
                     <div class="step-image">
-                        <img src="https://jeiii.cn/img/001.jpg" alt="Windows激活">
+                        <img src="https://jeiii.cn/img/001.jpg" alt="图片1">
                     </div>
                     </div>
 
-                    
+
                     <!-- 步骤2 -->
                     <div class="step">
                         <div class="step-number">2</div>
@@ -889,8 +861,8 @@
                                 <li style="color: var(--text-secondary); font-weight: 600;">目录安排：<br>
                                 <span style="font-weight: 300;">
                                     <div class="note" style="margin-top: 8px; margin-bottom: 8px; padding: 8px; background: rgba(75, 192, 192, 0.1); border-left: 4px solid #ff00002a;">
-                                    目录转移：设置目标文件夹： d:\jeiii\sys　 个人文件转移工具：<a href="Download/Directory transfer tool.html" target="_blank"><i class="fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
-                                    安装目录：推荐使用此路径： d:\jeiii\iii　　快捷图标库：<a href="Download/Shortcut lcon Library.html" target="_blank"><i class="fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a></span></li>
+                                    目录转移：设置目标文件夹： <span class="copyable-text" data-text="d:\jeiii\sys" style="cursor: pointer; color: var(--primary-color); font-weight: 500;">d:\jeiii\sys</span>　 个人文件转移工具：<a href="Download/Directory transfer tool.html" target="_blank"><i class="fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
+                                    安装目录：推荐使用此路径： <span class="copyable-text" data-text="d:\jeiii\iii" style="cursor: pointer; color: var(--primary-color); font-weight: 500;">d:\jeiii\iii</span>　　快捷图标库：<a href="Download/Shortcut lcon Library.html" target="_blank"><i class="fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a>
                                 <li style="color: var(--text-secondary); font-weight: 600;">解压工具：<br>
                                 <span style="font-weight: 300;">
                                     <div class="note" style="margin-top: 8px; margin-bottom: 8px; padding: 8px; background: rgba(75, 192, 192, 0.1); border-left: 4px solid #4bc0c0;">
@@ -901,7 +873,7 @@
                             </ul>
                         </div>
                         <div class="step-image">
-                            <img src="https://jeiii.cn/img/002.jpg" alt="系统优化">
+                            <img src="https://jeiii.cn/img/002.jpg" alt="图片2">
                         </div>
                     </div>
 
@@ -918,17 +890,14 @@
                                 <span style="font-weight: 300;">
                                     <div class="note" style="margin-top: 8px; margin-bottom: 8px; padding: 8px; background: rgba(75, 192, 192, 0.1); border-left: 4px solid #4bc0c0;">
                                     Office Tool Plus（推荐安装2024专业增强版）：<a href="Download/Office Tool Plus.html" target="_blank"><i class="fa-solid fa-right-to-bracket" style="color: rgb(117, 100, 65);"></i></a><br>
-                                </span>
-                                </li>
-
                                 <li style="color: var(--text-secondary); font-weight: 600;">激活工具：<br>
+                                <span style="font-weight: 300;">
                                     <div class="note" style="margin-top: 8px; margin-bottom: 8px; padding: 8px; background: rgba(75, 192, 192, 0.1); border-left: 4px solid #ff00002a;">
-                                    <span style="font-weight: 300;"> 
-                                    Win10/11、Office 激活工具：<a href="Download/KMS Win10 11 Office.html" target="_blank"><i class= "fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
-                                    </span>    
-                                    </div>
+                                    Win10/11、Office 激活工具：<a href="Download/KMS Win10 11 Office.html" target="_blank"><i class= "fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a>
+                                    <br>
                                 </li>
-                                
+                            </ol>
+                            </ul>
                                 <div class="code-block">
                                     <li style="color: var(--text-secondary);">    
                                         其他选装：<br>
@@ -939,12 +908,9 @@
                                         如果执意要使用WPS，推荐 WPS Office 2013 个人版：<a href="Download/WPS 2013.html" target="_blank"><i class= "fa-solid fa-download" style="color: rgba(109, 109, 109, 0.377);"></i></a><br>
                                     </li>
                                 </div>
-
-                            </ol>
-                            </ul>
                         </div>
                         <div class="step-image">
-                            <img src="https://jeiii.cn/img/003.jpg" alt="系统优化">
+                            <img src="https://jeiii.cn/img/003.jpg" alt="图片3">
                         </div>
                     </div>
 
@@ -980,7 +946,7 @@
 
                         </div>
                         <div class="step-image">
-                            <img src="https://jeiii.cn/img/004.jpg" alt="系统优化">
+                            <img src="https://jeiii.cn/img/004.jpg" alt="图片4">
                         </div>
                     </div>
 
@@ -1132,6 +1098,30 @@
         
         // 页面加载时创建浮动元素
         window.addEventListener('load', createFloatingElements);
+
+        // 点击复制功能（金戈标注）
+        document.querySelectorAll('.copyable-text').forEach(element => {
+            element.addEventListener('click', function() {
+                const textToCopy = this.getAttribute('data-text');
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    // 临时改变样式表示已复制
+                    const originalColor = this.style.color;
+                    const originalFontWeight = this.style.fontWeight;
+                    this.style.color = 'var(--accent-color)';
+                    this.style.fontWeight = '700';
+                    this.style.textDecoration = 'underline';
+                    
+                    // 3秒后恢复原样式
+                    setTimeout(() => {
+                        this.style.color = originalColor;
+                        this.style.fontWeight = originalFontWeight;
+                        this.style.textDecoration = '';
+                    }, 1000);
+                }).catch(err => {
+                    console.error('无法复制文本: ', err);
+                });
+            });
+        });
     </script>
 </body>
 </html>
