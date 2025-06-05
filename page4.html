@@ -828,15 +828,58 @@
                                 </li>
                                 </ol>
                             </ul>
-                                <div class="code-block">
-                                    <li style="color: var(--text-secondary);">    
-                                        最后更新日期：2025.05.22<br>
-                                    </li>
-                                </div>
                         </div>
                     <div class="step-image">
                         <img src="https://jeiii.cn/img/006.jpg" alt="Windows激活">
                     </div>
+                    </div>
+
+
+
+                    <!-- 步骤7 -->
+                    <div class="step">
+                        <div class="step-number">7</div>
+                        <div class="step-content">
+                            <h3 style="font-weight: normal;">经典进销存（用友T3、金蝶KIS、管家婆辉煌版）：</h3>
+                            <p style="font-weight: 300;">—— 这里只例举中小企业最常使用的：管家婆辉煌版（默认不联网，可闭门做自己的财务）。</p>
+                            <ul>
+                            <ol>
+                                <li style="color: var(--text-secondary); font-weight: 600;">系统搭建：<br>
+                                <span style="font-weight: 300;">
+                                    <div class="note" style="margin-top: 8px; margin-bottom: 8px; padding: 8px; background: rgba(75, 192, 192, 0.1); border-left: 4px solid #4bc0c0;">
+                                    操作系统：在虚拟机安装XP：站点1 <a href="Download/Windows download 1.html" target="_blank"><i class="fa-solid fa-right-to-bracket" style="color: rgb(117, 100, 65);"></i></a>　XP:
+                                    <span class="copyable-text" data-text="MRX3F-47B9T-2487J-KWKMF-RPWBY" style="cursor: pointer; color: var(--primary-color); font-weight: 500;">MRX3F-47B9T-2487J-KWKMF-RPWBY</span><br>
+                                    管家婆辉煌ⅡTOP+13.0网络版客户端：
+                                    <a href="Download/GRASP software.html" target="_blank"><i class= "fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
+                                    管家婆辉煌系列 · 帮助文档：
+                                    <a href="Download/GRASP software - help.html" target="_blank"><i class= "fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
+                                    管家婆辉煌系列（生产组装）视频教程：
+                                    <a href="Download/GRASP software - mp4.html" target="_blank"><i class= "fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a><br>
+                                    管家婆辉煌系列（完整版145课）视频教程：
+                                    <a href="Download/Download TXT.html" target="_blank"><i class= "fa-solid fa-download" style="color: rgb(117, 100, 65);"></i></a>
+                                </span>
+                                </li>
+                            </ol>
+                            </ul>
+                                <div class="code-block">
+                                <li style="color: var(--text-secondary);">
+                                    For XP（专用软件）：
+                                    五笔输入法86版
+                                    <a href="Download/WB For XP.html" target="_blank"><i class="fa-solid fa-download" style="color: rgba(109, 109, 109, 0.377);"></i></a>　
+                                    压缩WinRAR
+                                    <a href="Download/WinRAR For XP.html" target="_blank"><i class="fa-solid fa-download" style="color: rgba(109, 109, 109, 0.377);"></i></a>　
+                                    浏览器Firefox
+                                    <a href="Download/Firefox For XP.html" target="_blank"><i class="fa-solid fa-download" style="color: rgba(109, 109, 109, 0.377);"></i></a>　
+                                </li>
+                                    <li style="color: var(--text-secondary);">
+                                    最原始的打单方式（销售单打印 - Excel 表格订制模板）：
+                                    <a href="Download/Excel - Sales invoice.html" target="_blank"><i class="fa-solid fa-download" style="color: rgba(109, 109, 109, 0.377);"></i></a>　
+                                </li>
+                                </div>
+                        </div>
+                        <div class="step-image">
+                            <img src="https://jeiii.cn/img/007.jpg" alt="图片7">
+                        </div>
                     </div>
 
 
@@ -989,6 +1032,30 @@
         
         // 页面加载时创建浮动元素
         window.addEventListener('load', createFloatingElements);
+
+        // 点击复制功能（金戈标注）
+        document.querySelectorAll('.copyable-text').forEach(element => {
+            element.addEventListener('click', function() {
+                const textToCopy = this.getAttribute('data-text');
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    // 临时改变样式表示已复制
+                    const originalColor = this.style.color;
+                    const originalFontWeight = this.style.fontWeight;
+                    this.style.color = 'var(--accent-color)';
+                    this.style.fontWeight = '700';
+                    this.style.textDecoration = 'underline';
+                    
+                    // 3秒后恢复原样式
+                    setTimeout(() => {
+                        this.style.color = originalColor;
+                        this.style.fontWeight = originalFontWeight;
+                        this.style.textDecoration = '';
+                    }, 1000);
+                }).catch(err => {
+                    console.error('无法复制文本: ', err);
+                });
+            });
+        });
     </script>
 </body>
 </html>
