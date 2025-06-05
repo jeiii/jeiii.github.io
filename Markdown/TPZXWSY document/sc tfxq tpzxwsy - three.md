@@ -11,7 +11,7 @@
 
 以太平院区 **电脑调阅** 为例：
 
-1. 软件下载：[海康威视中文官网](https://www.hikvision.com/cn)（由于网站用了防盗链，故请按图指引下载）
+1. 软件下载：<a href="https://www.hikvision.com/cn" target="_blank" rel="noopener noreferrer">海康威视中文官网</a>（由于网站用了防盗链，故请按图指引下载）
 ![](https://jeiii.cn/img/tpzxwsy/hikvision_1.png)
 ![](https://jeiii.cn/img/tpzxwsy/hikvision_2.png)
 ![](https://jeiii.cn/img/tpzxwsy/hikvision_3.png)
