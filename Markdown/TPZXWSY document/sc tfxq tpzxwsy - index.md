@@ -2,7 +2,7 @@
 
 ## 💊 HIS 系统及相关 …
 
-- HIS（万达基卫系统）：如报错请安装 <a href="https://sm.myapp.com/original/Development/dotNetFx40_Full_x86_x64.exe" target="_blank" rel="noopener noreferrer">运行环境.net4.0</a>
+- HIS（万达基卫系统）：如报错请安装 <a href="https://dotnet.microsoft.com/zh-cn/download/dotnet-framework" target="_blank" rel="noopener noreferrer">运行环境.NET Framework</a>（Win7 和不完整的 Win10，请选择 4.7.2）
 
   - **多用户版**：<a href="../../Download/tpzxwsy-HIS-1.html" target="_blank" rel="noopener noreferrer">万达基卫系统（To Customer版）—— 2024.04.24 更新.zip</a>
 
