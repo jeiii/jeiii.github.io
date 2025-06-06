@@ -5,3 +5,5 @@
 - **阻止联网**：防止软件被和谐！目前大部分快照软件都是收费的，所以要做防护，用这个工具：<a href="../../Download/Firewall App Blocker (Fab).html" target="_blank" rel="noopener noreferrer">Firewall App Blocker (Fab)</a>。
 - **核对清单**：⚠️*办公场景、游戏场景、更多场景是清单顺序，按需选择；建议封装前清理掉留下的使用痕迹。*
 - **快照工具**：👌*实现所谓，一次装机，永久使用（主机不烂，系统不坏）！*
+
+> `—— JEIII WinList Blog 最后更新：2025.06.06`
