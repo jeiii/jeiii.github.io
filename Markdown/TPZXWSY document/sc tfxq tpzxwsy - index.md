@@ -48,4 +48,4 @@
 1. 监控系统：[院内如何查看门卫监控](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20three.md)？
 1. 价目表：<a href="https://jeiii.cn/114" target="_blank" rel="noopener noreferrer">执行二级医院价格明细表，执行时间：2024.09.18  0:00</a>。
 1. 飞书知识库空间（待转出部分）：<a href="https://tfxqtpzxwsy.feishu.cn/wiki/JWEMwfYzni2RbqkUZEXcqEMknMe" target="_blank" rel="noopener noreferrer">TAIPING医院</a>。
-1. 网址收藏：<a href="https://jeiii.cn/114" target="_blank" rel="noopener noreferrer">张朝锋</a>　
+1. 网址收藏：<a href="https://www.jeiii.cn:2025/template_1.html?md=Markdown/TPZXWSY document/sc tfxq tpzxwsy - zhang chao feng.md" target="_blank" rel="noopener noreferrer">张朝锋</a>　
