@@ -38,7 +38,7 @@
 —— 已迁回医院，现存放在张朝锋老师办公室电脑上；由于没有公网固定IPv4，只能采用动态IPv6进行外网访问。这就出现了两个缺点：1、使用的电脑所处的网络必须打开路由器IPv6。2、动态IPv6受网络波动影响，一周可能会出现N次地址更换（手机使用数据流量，默认有IPv6）。
 
 > - **电脑端**：太平院区：<a href="http://Win2016:8081" target="_blank" rel="noopener noreferrer">http://Win2016:8081</a>　　　　外网：<a href="http://[240e:39b:ed4:63d1::38e]:8081" target="_blank" rel="noopener noreferrer">IPv6地址最后更新时间：2025.06.07 17:58</a>
-> - **移动端**：太平院区：<a href="http://Win2016:9999" target="_blank" rel="noopener noreferrer">http://Win2016:9999</a>　　　　外网：<a href="http://[240e:39b:ed4:63d1::38e]:9999" target="_blank" rel="noopener noreferrer">IPv6地址最后更新时间：2025.06.07 17:58</a>（在 **移动办公M3** 中设置）
+> - **移动端**：太平院区：`http://Win2016:9999`　　　　外网：http://[240e:39b:ed4:63d1::38e]:9999（在 **移动办公M3** 中设置）
 
 ---
 
@@ -48,3 +48,4 @@
 1. 监控系统：[院内如何查看门卫监控](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20three.md)？
 1. 价目表：<a href="https://jeiii.cn/114" target="_blank" rel="noopener noreferrer">执行二级医院价格明细表，执行时间：2024.09.18  0:00</a>。
 1. 飞书知识库空间（待转出部分）：<a href="https://tfxqtpzxwsy.feishu.cn/wiki/JWEMwfYzni2RbqkUZEXcqEMknMe" target="_blank" rel="noopener noreferrer">TAIPING医院</a>。
+1. 网址收藏：<a href="https://jeiii.cn/114" target="_blank" rel="noopener noreferrer">张朝锋</a>　
