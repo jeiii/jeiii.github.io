@@ -1,14 +1,33 @@
 # 👨‍💻 OA 系统管理软件
 
-—— 已迁回医院，现存放在张朝锋老师办公室电脑上；由于没有公网固定IPv4，只能采用动态IPv6进行外网访问。这就出现了三个问题：
+## 数据存储与访问说明
 
-1. 在访问时，首先确认：张朝锋老师的电脑是否开机？
-2. 在院外访问时，使用的电脑所处的网络，必须打开路由器IPv6（新购的路由器一般默认是打开的）。
-3. 在院外访问时，动态IPv6受网络波动影响，一周可能会出现N次地址更换（另外电脑重启地址也会更换）。
+系统数据存储于张朝锋老师办公室电脑。因缺乏固定公网IPv4地址，外网访问需通过动态IPv6实现。张含金老师已提供私人域名（x.jeiii.cn）用于DDNS解析服务。访问条件如下：
 
-> - **电脑端**：太平院区内网：<a href="http://Win2016:8081" target="_blank" rel="noopener noreferrer">http://Win2016:8081 </a>或 <a href="http://Win2016:8081" target="_blank" rel="noopener noreferrer">http://192.168.6.99:8081</a>　　　　公网：<a href="http://x.jeiii.cn:8081" target="_blank" rel="noopener noreferrer">http://x.jeiii.cn:8081</a>
-> - **移动端**：公网：`http://x.jeiii.cn:9999`（在 **移动办公M3** 中设置）
+1. **基础条件**：需确保存储电脑处于开机状态
+2. **移动端**：通过手机流量可直接访问（无网络限制）
+3. **电脑端**：
+   - 院外访问时需确保所在网络支持IPv6（新购路由器默认开启）
+   - 院内访问无特殊要求
+
+## 访问地址
+
+### 电脑端
+
+> - **院内访问**：
+>   - <a href="http://Win2016:8081" target="_blank" rel="noopener noreferrer">http://Win2016:8081</a> 
+>   - <a href="http://Win2016:8081" target="_blank" rel="noopener noreferrer">http://192.168.6.99:8081</a>　
+> - **公网访问**：
+>   - [http://x.jeiii.cn:8081](http://x.jeiii.cn:8081/)
+
+### 移动端
+
+> - 访问地址：`http://x.jeiii.cn:9999`
+> - 需在**移动办公M3**应用中配置使用
+
+—— 此处院内仅指太平院区　　2025.06.10　23:56 更新
 
 ---
 
 [--== 返回 ==--](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20index.md)
+
