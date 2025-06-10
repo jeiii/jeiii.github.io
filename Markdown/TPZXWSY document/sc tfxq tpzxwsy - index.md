@@ -37,6 +37,7 @@
 ## ♏ More …
 
 1. OA 系统管理软件：[在张朝锋老师电脑上](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20OA.md)。
+1. 前置软件（内网）：<a href="http://10.1.78.37:8881/softApp.html#/about" target="_blank" rel="noopener noreferrer">http://10.1.78.37:8881</a>（123456）。
 1. 光缆信息（拨打 10000；报修&自检备查）：[医院及村站光缆信息](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20two.md)。
 1. 监控系统：[院内如何查看门卫监控](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20three.md)？
 1. 网址收藏：[张朝锋](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20zhang%20chao%20feng.md)
