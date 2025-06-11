@@ -15,7 +15,7 @@
 ### 电脑端
 
 > - **院内访问**：
->   - <a href="http://Win2016:8081" target="_blank" rel="noopener noreferrer">http://Win2016:8081</a> 或 <a href="http://Win2016:8081" target="_blank" rel="noopener noreferrer">http://192.168.6.99:8081</a>
+>   - <a href="http://Win2016:8081" target="_blank" rel="noopener noreferrer">http://Win2016:8081</a> 或 <a href="http://192.168.6.99:8081" target="_blank" rel="noopener noreferrer">http://192.168.6.99:8081</a>
 > - **公网访问**：
 >   - [http://x.jeiii.cn:8081](http://x.jeiii.cn:8081/)
 
