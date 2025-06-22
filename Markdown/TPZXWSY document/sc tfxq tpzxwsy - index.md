@@ -4,9 +4,9 @@
 
 - HIS（万达基卫系统）：如报错请安装 <a href="https://dotnet.microsoft.com/zh-cn/download/dotnet-framework" target="_blank" rel="noopener noreferrer">运行环境.NET Framework</a>（Win7 和不完整的 Win10，请选择 4.7.2）
 
-  - **多用户版**：<a href="../../Download/tpzxwsy-HIS-1.html" target="_blank" rel="noopener noreferrer">万达基卫系统（To Customer版）—— 2024.04.24 更新.zip</a>
+  - **多用户版**：<a href="../../Download/tpzxwsy-HIS-1.html" target="_blank" rel="noopener noreferrer">万达基卫系统（To Customer版）—— 2025.05.12 更新.zip</a>
 
-  - **原程序包**：<a href="../../Download/tpzxwsy-HIS-2.html" target="_blank" rel="noopener noreferrer">万达基卫系统.zip</a>
+  - **原程序包**：<a href="../../Download/tpzxwsy-HIS-2.html" target="_blank" rel="noopener noreferrer">万达基卫系统 2025.05.12 更新.7z</a>
 
   - **社保控件**：<a href="../../Download/tpzxwsy-insurance.html" target="_blank" rel="noopener noreferrer">医保安全控件_25.03.29Upgrade Package_x86_x64_Setup.zip</a> （2025.05.27 黄永建老师提供）
 
@@ -41,6 +41,7 @@
 1. 光缆信息（拨打 10000；报修&自检备查）：[医院及村站光缆信息](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20two.md)。
 1. 监控系统：[院内如何查看门卫监控](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20three.md)？
 1. 网址收藏：[张朝锋](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20zhang%20chao%20feng.md)
-1. <a href="https://qg6r2i.yuque.com/qg6r2i/csvggm/aplq2w" target="_blank" rel="noopener noreferrer">码上放心-医疗机构接口对接指南</a>
+1. 付娜提供：[成都市医保“扫码结算”工作手册](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20fu%20na.md)
+1. 码上放心：<a href="https://qg6r2i.yuque.com/qg6r2i/csvggm/aplq2w" target="_blank" rel="noopener noreferrer">医疗机构接口对接指南</a>
 1. 价目表：<a href="https://jeiii.cn/114" target="_blank" rel="noopener noreferrer">执行二级医院价格明细表，执行时间：2024.09.18  0:00</a>。
 1. 飞书知识库空间（待转出部分）：<a href="https://tfxqtpzxwsy.feishu.cn/wiki/JWEMwfYzni2RbqkUZEXcqEMknMe" target="_blank" rel="noopener noreferrer">TAIPING医院</a>。
