@@ -4,9 +4,9 @@
 
 - HIS（万达基卫系统）：如报错请安装 <a href="https://dotnet.microsoft.com/zh-cn/download/dotnet-framework" target="_blank" rel="noopener noreferrer">运行环境.NET Framework</a>（Win7 和不完整的 Win10，请选择 4.7.2）
 
-  - **多用户版**：<a href="../../Download/tpzxwsy-HIS-1.html" target="_blank" rel="noopener noreferrer">万达基卫系统（To Customer版）—— 2025.05.12 更新.zip</a>
+  - **多用户版**：<a href="../../Download/tpzxwsy-HIS-1.html" target="_blank" rel="noopener noreferrer">万达基卫系统（To Customer版）—— 2025.06.22 更新.zip</a>
 
-  - **原程序包**：<a href="../../Download/tpzxwsy-HIS-2.html" target="_blank" rel="noopener noreferrer">万达基卫系统 2025.05.12 更新.7z</a>
+  - **原程序包**：<a href="../../Download/tpzxwsy-HIS-2.html" target="_blank" rel="noopener noreferrer">万达基卫系统 2025.05.12 更新.7z</a>　　　　<a href="../../Download/Wdphisbrowser.html" target="_blank" rel="noopener noreferrer">万达网址</a>
 
   - **社保控件**：<a href="../../Download/tpzxwsy-insurance.html" target="_blank" rel="noopener noreferrer">医保安全控件_25.03.29Upgrade Package_x86_x64_Setup.zip</a> （2025.05.27 黄永建老师提供）
 
