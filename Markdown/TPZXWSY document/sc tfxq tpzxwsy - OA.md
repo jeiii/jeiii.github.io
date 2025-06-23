@@ -24,9 +24,8 @@
 > - 访问地址：`http://x.jeiii.cn:9999`
 > - 需在**移动办公M3**应用中配置使用
 
-—— 此处院内仅指太平院区　　2025.06.10　23:56 更新
+—— 此处院内仅指太平院区　　2025.06.23　15:58 更新
 
 ---
 
 [--== 返回 ==--](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20index.md)
-
