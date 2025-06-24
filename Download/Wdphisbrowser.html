@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Wdphisbrowser</title>
+    <title>万达基卫：jeiii.cn/120</title>
     <style>
         body {
             margin: 0;
@@ -55,11 +55,16 @@
         .back-button:active {
             transform: translateY(1px);
         }
-        .center-button {
+        .buttons-container {
             position: absolute;
-            top: 66.66%; /* 调整为纵向2/3处 */
+            top: 66.66%;
             left: 50%;
             transform: translate(-50%, -50%);
+            display: flex;
+            gap: 20px;
+            z-index: 1000;
+        }
+        .center-button {
             padding: 15px 30px;
             background: linear-gradient(135deg, #4facfe, #00f2fe);
             color: white;
@@ -71,18 +76,36 @@
             text-decoration: none;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
-            z-index: 1000;
             display: flex;
             align-items: center;
             justify-content: center;
+            white-space: nowrap;
         }
         .center-button:hover {
-            transform: translate(-50%, -52%);
+            transform: translateY(-2px);
             box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
             background: linear-gradient(135deg, #3a9bf5, #00d9e6);
         }
         .center-button:active {
-            transform: translate(-50%, -48%);
+            transform: translateY(1px);
+        }
+        .watermark {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            font-family: 'Arial', sans-serif;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        .watermark:hover {
+            color: rgba(255, 255, 255, 0.9);
+            background: rgba(0, 0, 0, 0.5);
+            text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
         }
     </style>
 </head>
@@ -90,7 +113,11 @@
     <div class="container">
         <iframe src="https://www.cdtfjk.com/helpjm/index.html" scrolling="no"></iframe>
         <a href="https://jeiii.cn" class="back-button">返回首页</a>
-        <a href="https://jeiii.cn/Download/tpzxwsy-HIS-1.html" target="_blank" class="center-button">万达基卫(多用户版·太平卫生院)—— 2025.06.22 更新</a>
+        <div class="buttons-container">
+            <a href="https://jeiii.cn/Download/tpzxwsy-HIS-1.html" target="_blank" class="center-button">万达基卫(多用户版·太平卫生院)—— 2025.06.22 更新</a>
+            <a href="https://dotnet.microsoft.com/zh-cn/download/dotnet-framework" target="_blank" class="center-button">.Net官网(运行环境)</a>
+        </div>
+        <div class="watermark">此页：jeiii.cn/120</div>
     </div>
 </body>
 </html>
