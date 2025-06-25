@@ -41,7 +41,6 @@
 1. 光缆信息（拨打 10000；报修&自检备查）：[医院及村站光缆信息](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20two.md)。
 1. 监控系统：[院内如何查看门卫监控](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20three.md)？
 1. 网址收藏：[张朝锋](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20zhang%20chao%20feng.md)
-1. 付娜提供：[成都市医保“扫码结算”工作手册](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20fu%20na.md)
-1. 码上放心：<a href="https://qg6r2i.yuque.com/qg6r2i/csvggm/aplq2w" target="_blank" rel="noopener noreferrer">医疗机构接口对接指南</a>
-1. 价目表：<a href="https://jeiii.cn/114" target="_blank" rel="noopener noreferrer">执行二级医院价格明细表，执行时间：2024.09.18  0:00</a>。
-1. 飞书知识库空间：<a href="https://tfxqtpzxwsy.feishu.cn/wiki/JWEMwfYzni2RbqkUZEXcqEMknMe" target="_blank" rel="noopener noreferrer">TAIPING 医院 —— This is Jin Ge's work log.</a>
+1. 码上放心：[注册信息档案](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20ma%20shang%20fang%20xin.md)
+1. 价目表：[执行二级医院价格明细表，执行时间：2024.09.18  0:00](https://jeiii.cn/114)。
+1. 飞书知识库空间：[TAIPING 医院 —— This is Jin Ge's work log.](https://tfxqtpzxwsy.feishu.cn/wiki/JWEMwfYzni2RbqkUZEXcqEMknMe)
