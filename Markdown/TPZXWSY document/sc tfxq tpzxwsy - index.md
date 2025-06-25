@@ -36,11 +36,11 @@
 
 ## ♏ More …
 
-1. OA 系统管理软件：[在张朝锋老师电脑上](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20OA.md)。
+1. OA 系统管理软件：[在张朝锋老师电脑上](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20OA.md) 
+1. 码上放心：[注册信息档案](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20ma%20shang%20fang%20xin.md) 
 1. 前置软件（内网）：<a href="http://10.1.78.37:8881/softApp.html#/about" target="_blank" rel="noopener noreferrer">http://10.1.78.37:8881</a>（123456）；<a href="../../Download/datahub_win64.html" target="_blank" rel="noopener noreferrer">datahub_win64</a>、<a href="../../Download/datahub_win32.html" target="_blank" rel="noopener noreferrer">datahub_win32</a>。
-1. 光缆信息（拨打 10000；报修&自检备查）：[医院及村站光缆信息](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20two.md)。
-1. 监控系统：[院内如何查看门卫监控](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20three.md)？
-1. 网址收藏：[张朝锋](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20zhang%20chao%20feng.md)
-1. 码上放心：[注册信息档案](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20ma%20shang%20fang%20xin.md)
-1. 价目表：[执行二级医院价格明细表，执行时间：2024.09.18  0:00](https://jeiii.cn/114)。
-1. 飞书知识库空间：[TAIPING 医院 —— This is Jin Ge's work log.](https://tfxqtpzxwsy.feishu.cn/wiki/JWEMwfYzni2RbqkUZEXcqEMknMe)
+1. 光缆信息（拨打 10000；报修&自检备查）：[医院及村站光缆信息](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20two.md) 
+1. 监控系统：[院内如何查看门卫监控？](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20three.md) 
+1. 网址收藏：[张朝锋](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20zhang%20chao%20feng.md) 
+1. 价目表：<a href="https://jeiii.cn/114" target="_blank" rel="noopener noreferrer">执行二级医院价格明细表，执行时间：2024.09.18  0:00</a> 
+1. 飞书知识库空间：[TAIPING 医院 —— This is Jin Ge's work log.](https://tfxqtpzxwsy.feishu.cn/wiki/JWEMwfYzni2RbqkUZEXcqEMknMe) 

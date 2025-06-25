@@ -14,9 +14,9 @@
 >
 > 序号 4 在 `淘宝开放平台` > `开发` > `我的应用` > `应用管理` > `AppSecret 查看` 中查询（包括：Appkey）。
 
-4. 注册时填写的药品负责人：裴娟（15982358883）。
-5. 付娜提供：[成都市医保“扫码结算”工作手册](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20fu%20na.md)
-6. 手册：[码上放心-医疗机构接口对接指南](https://qg6r2i.yuque.com/qg6r2i/csvggm/aplq2w)
+4. 注册时填写的药品负责人：裴娟（15982358883）
+5. 手册：[码上放心-医疗机构接口对接指南](https://qg6r2i.yuque.com/qg6r2i/csvggm/aplq2w) 
+6. 付娜提供：[成都市医保“扫码结算”工作手册](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20fu%20na.md) 
 
 ---
 
