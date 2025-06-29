@@ -10,5 +10,5 @@
 
 ---
 
-[--== 返回 ==--](template_1.html?md=/Markdown/English/index.md)
+[--== Back ==--](template_1.html?md=/Markdown/English/index.md)
 
