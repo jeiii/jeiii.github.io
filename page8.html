@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WinList Blog - 管理员后台中心</title>
+    <title>LinkHub — More Than Just Links.</title>
     <!-- 引入字体和图标库 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -50,7 +50,7 @@
         body {
             font-family: 'Noto Sans SC', sans-serif;
             background: linear-gradient(var(--overlay-color), var(--overlay-color)), 
-                        url('https://jeiii.cn/img/023.jpg') no-repeat center center fixed;
+                        url('https://jeiii.cn/img/030.jpg') no-repeat center center fixed;
             background-size: cover;
             color: var(--text-primary);
             min-height: 100vh;
@@ -220,12 +220,12 @@
 
         .hero {
             text-align: center;
-            padding: 80px 0;
+            padding: 40px 0 20px; /* 将原来的80px 0 20px 改为40px 0 20px，减少上下padding */
         }
 
         .hero h1 {
             font-size: 3.5rem;
-            margin-bottom: 20px;
+            margin-bottom: 5px; /* 将原来的20px改为5px */
             background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
             -webkit-background-clip: text;
             background-clip: text;
@@ -237,7 +237,7 @@
             font-size: 1.2rem;
             color: var(--text-secondary);
             max-width: 800px;
-            margin: 0 auto 40px;
+            margin: 0 auto 10px; /* 将原来的0 auto 40px改为0 auto 10px */
         }
 
         .cta-buttons {
@@ -505,142 +505,6 @@
             transform: translateX(-50%) scale(1);
         }
 
-        /* 表格区域样式 */
-        .content-section {
-            background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 8px 30px var(--shadow-color);
-            border: 1px solid var(--border-color);
-            margin: 20px auto;
-            max-width: 1200px;
-        }
-
-        .search-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-            gap: 20px;
-        }
-
-        .search-box {
-            flex: 1;
-            position: relative;
-        }
-
-        .search-box input {
-            width: 100%;
-            padding: 12px 20px 12px 45px;
-            border-radius: 50px;
-            border: 1px solid var(--border-color);
-            background: var(--bg-secondary);
-            color: var(--text-primary);
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .search-box input:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.2);
-        }
-
-        .search-box i {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-secondary);
-        }
-
-        .table-title {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: var(--primary-color);
-            text-align: center;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .table-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            border-radius: 3px;
-        }
-
-        .software-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            overflow: hidden;
-            box-shadow: 0 0 20px var(--shadow-color);
-            border-radius: 10px;
-        }
-
-        .software-table thead tr {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            text-align: left;
-        }
-
-        .software-table th,
-        .software-table td {
-            padding: 15px;
-        }
-
-        .software-table th {
-            font-weight: 600;
-        }
-
-        .software-table tbody tr {
-            border-bottom: 1px solid var(--border-color);
-            background: var(--card-bg);
-        }
-
-        .software-table tbody tr:nth-child(even) {
-            background: var(--bg-secondary);
-        }
-
-        .software-table tbody tr:last-of-type {
-            border-bottom: 2px solid var(--primary-color);
-        }
-
-        .software-table tbody tr:hover {
-            background: rgba(58, 134, 255, 0.1);
-        }
-
-        .software-table td:first-child {
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-
-        .download-btn {
-            padding: 6px 12px;
-            background: var(--primary-color);
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .download-btn:hover {
-            background: var(--secondary-color);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px var(--shadow-color);
-        }
-
         /* 响应式设计 */
         @media (max-width: 992px) {
             .hero h1 {
@@ -693,15 +557,6 @@
             .features {
                 grid-template-columns: 1fr;
             }
-
-            .search-container {
-                flex-direction: column;
-            }
-
-            .software-table {
-                display: block;
-                overflow-x: auto;
-            }
         }
 
         @media (max-width: 576px) {
@@ -712,18 +567,78 @@
             .logo {
                 height: 30px;
             }
+        }
 
-            .table-title {
-                font-size: 1.5rem;
+        /* Navigation Grid Styles */
+        .buttons-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.2rem;
+            margin: 3rem 0;
+        }
+
+        .nav-btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.8rem 0.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            font-size: 0.9rem;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            word-break: break-word;
+        }
+
+        .nav-btn:hover {
+            background: transparent;
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px var(--shadow-color);
+        }
+
+        .category-title {
+            grid-column: 1 / -1;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .buttons-grid {
+                grid-template-columns: repeat(4, 1fr);
             }
+        }
 
-            .software-table th,
-            .software-table td {
-                padding: 10px 5px;
-                font-size: 0.9rem;
+        @media (max-width: 992px) {
+            .buttons-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .buttons-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .buttons-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
+
 </head>
 <body>
     <!-- 浮动背景元素 -->
@@ -738,14 +653,14 @@
                 </div>
                 
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="../index.html"><i class="fas fa-home"></i> 首页</a></li>
-                    <li><a href="../page2.html"><i class="fas fa-laptop"></i> 办公</a></li>
-                    <li><a href="../page3.html"><i class="fa-brands fa-steam"></i> 游戏</a></li>
-                    <li><a href="../page4.html"><i class="fas fa-layer-group"></i> 更多场景</a></li>
+                    <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                    <li><a href="page2.html"><i class="fas fa-laptop"></i> 办公</a></li>
+                    <li><a href="page3.html"><i class="fa-brands fa-steam"></i> 游戏</a></li>
+                    <li><a href="page4.html"><i class="fas fa-layer-group"></i> 更多场景</a></li>
                     <li><a href="page5.html"><i class="fa-solid fa-file-video"></i> 演示</a></li>
                     <li><a href="/template_1.html?md=/Markdown/Public%20document%20index.md"><i class="fa-brands fa-markdown"></i> 文档</a></li>
-                    <li><a href="../page6.html"><i class="fa-regular fa-bookmark"></i> 装机用户</a></li>
-                    <li><a href="#"><i class="fas fa-user"></i> 管理员</a></li>
+                    <li><a href="page6.html"><i class="fa-regular fa-bookmark"></i> 装机用户</a></li>
+                    <li><a href="page7.html"><i class="fas fa-user"></i> 管理员</a></li>
                 </ul>
                 
                 <div class="nav-actions">
@@ -760,100 +675,112 @@
         </div>
     </header>
     
-    <main>
-        <div class="container">
-            <div class="content-section">
-                <div class="search-container">
-                    <div class="search-box">
-                        <i class="fas fa-search"></i>
-                        <input type="text" id="searchInput" placeholder="搜索网站...">
-                    </div>
-                    <button class="download-btn" id="exportBtn">
-                        <i class="fa-solid fa-circle-info"></i>
-                    </button>
-                </div>
-                
-                <h2 class="table-title">JEIII WinList Blog —— 背后涉及的所有网站</h2>
-                
-                <table class="software-table">
-                    <thead>
-                        <tr>
-                            <th>序号</th>
-                            <th>网站名称</th>
-                            <th>描述</th>
-                            <th>操作</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                        <tr>
-                            <td>1</td>
-                            <td>Markdown</td>
-                            <td>John Gruber 极具创新精神，他创造的 Markdown 极大地改变了人们在网络上创作和分享内容的方式。</td>
-                            <td><a href="https://daringfireball.net/projects/markdown" class="download-btn" target="_blank">进入</a></td>
-                        </tr>
+<main>
+    <div class="container">
+        <section class="hero">
+            <h1>LinkHub</h1>
+            <p class="subtitle">— More Than Just Links.</p>
+        </section>
+        
+        <div class="buttons-grid">
+            <h3 class="category-title">1. 网络工具</h3>
+            <a href="https://fw.koolcenter.com/iStoreOS" target="_blank" class="nav-btn">iStoreOS</a>
+            <a href="https://github.com/AUK9527/Are-u-ok/tree/main" target="_blank" class="nav-btn">iStore插件包</a>
+            <a href="https://firmware-selector.immortalwrt.org" target="_blank" class="nav-btn">ImmortalWrt</a>
+            <a href="https://noc.ruijie.com.cn/sso/login" target="_blank" class="nav-btn">诺客</a>
+            <a href="https://yun.ikuai8.com" target="_blank" class="nav-btn">爱快·云平台</a>
+            <a href="https://www.dnspod.cn" target="_blank" class="nav-btn">DNSPod</a>
+            <a href="https://github.com/BornToBeRoot/NETworkManager" target="_blank" class="nav-btn">网络管理器</a>
+            <a href="https://www.speedtest.cn" target="_blank" class="nav-btn">测网速</a>
+            <a href="https://myip.ipip.net/?" target="_blank" class="nav-btn">IP查询</a>
+            <a href="https://www.test-ipv6.com" target="_blank" class="nav-btn">IPv6测试</a>
+            <a href="https://www.hikiot.com/portal/login" target="_blank" class="nav-btn">海康互联-工作台</a>
 
-                        <tr>
-                            <td>2</td>
-                            <td>MDN Web Docs</td>
-                            <td>为开发者提供学习资源和技术支持；小站大部分问题的解决是从此站获得，感谢 Mozilla 公司。</td>
-                            <td><a href="https://developer.mozilla.org" class="download-btn" target="_blank">进入</a></td>
-                        </tr>
+            <h3 class="category-title">2. 博客站及自媒体辅助</h3>
+            <a href="https://www.notion.so" target="_blank" class="nav-btn">Notion</a>
+            <a href="https://open.gridea.dev" target="_blank" class="nav-btn">Gridea</a>
+            <a href="https://hexo.io" target="_blank" class="nav-btn">Hexo</a>
+            <a href="https://www.progit.cn" target="_blank" class="nav-btn">Pro Git</a>
+            <a href="https://nodejs.org/en" target="_blank" class="nav-btn">Node</a>
+            <a href="https://www.datatool.vip" target="_blank" class="nav-btn">最强在线视频下载器</a>
+            <a href="https://dmsave.top/youtube-video-downloader-for-desktop" target="_blank" class="nav-btn">VidsMe</a>
+            <a href="https://cobalt.tools" target="_blank" class="nav-btn">视频下载</a>
+            <a href="https://www.freesound.cn" target="_blank" class="nav-btn">无版权音乐库</a>
+            <a href="https://www.naturalreaders.com" target="_blank" class="nav-btn">AI Voices</a>
+            <a href="https://d1tools.com/tools/ai-tts" target="_blank" class="nav-btn">文字转语音</a>
+            <a href="https://sight.youdao.com" target="_blank" class="nav-btn">语音转文字</a>
+            <a href="http://www.akuziti.com" target="_blank" class="nav-btn">字体生成</a>
+            <a href="https://www.iconfont.cn" target="_blank" class="nav-btn">阿里图标库</a>
+            <a href="https://wallpapercave.com" target="_blank" class="nav-btn">wallpaper</a>
+            <a href="https://www.720yun.com" target="_blank" class="nav-btn">720云</a>
+            <a href="https://360vryun.com" target="_blank" class="nav-btn">360VR</a>
+            <a href="https://www.docker.com" target="_blank" class="nav-btn">Docker</a>
+            <a href="https://docker.easydoc.net" target="_blank" class="nav-btn">Docker·help</a>
+            <a href="https://www.synology.cn/zh-cn" target="_blank" class="nav-btn">Syonlogy</a>
 
-                        <tr>
-                            <td>3</td>
-                            <td>Font Awesome</td>
-                            <td>素材工具站：包含丰富图标和样式；小站大部分图标样式均来自于它。</td>
-                            <td><a href="https://fontawesome.com" class="download-btn" target="_blank">进入</a></td>
-                        </tr>
 
-                        <tr>
-                            <td>4</td>
-                            <td>DNSPod</td>
-                            <td>腾讯云旗下 DNS 服务；小站的镜像站点使用了他家的 DNS 服务。</td>
-                            <td><a href="https://dnspod.cn" class="download-btn" target="_blank">进入</a></td>
-                        </tr>
+            <h3 class="category-title">3. 刷机相关</h3>
+            <a href="https://www.ventoy.net" target="_blank" class="nav-btn">Ventoy</a>
+            <a href="https://www.wepe.com.cn" target="_blank" class="nav-btn">微PE</a>
+            <a href="https://github.com/viarotel-org/escrcpy" target="_blank" class="nav-btn">Escrcpy</a>
+            <a href="https://www.mi.com/service/support/rom" target="_blank" class="nav-btn">小米刷机</a>
+            <a href="https://xiaomirom.com" target="_blank" class="nav-btn">小米Rom</a>
+            <a href="https://developer.android.google.cn/tools/releases/platform-tools?hl=zh-cn" target="_blank" class="nav-btn">ADB工具_SDK</a>
+            <a href="https://pixelos.net" target="_blank" class="nav-btn">PixelOS刷机</a>
+            <a href="https://get.pixelexperience.org" target="_blank" class="nav-btn">PE刷机</a>
 
-                        <tr>
-                            <td>5</td>
-                            <td>飞书云文档</td>
-                            <td>使用之下的知识库能存文件的特点；给小站提供了20兆以内的下载功能，在此感谢飞书。</td>
-                            <td><a href="https://jeiii-cn.feishu.cn/wiki/Rf25w7PntiGeelkgRE8cF2xanGh?fromScene=spaceOverview" class="download-btn" target="_blank">进入</a></td>
-                        </tr>
+            <h3 class="category-title">4. 英语网站</h3>
+            <a href="https://www.memrise.com/zh-hans" target="_blank" class="nav-btn">学外语走天下</a>
+            <a href="https://www.talkenglish.com" target="_blank" class="nav-btn">TalkEnglish</a>
+            <a href="https://www.lingohut.com" target="_blank" class="nav-btn">LingoHut</a>
+            <a href="https://www.dkefe.com/cn/audio" target="_blank" class="nav-btn">English for everyone</a>
+            <a href="https://forvo.com" target="_blank" class="nav-btn">forvo</a>
+            <a href="https://www.busuu.com/zh" target="_blank" class="nav-btn">博树</a>
+            <a href="https://www.entts.com" target="_blank" class="nav-btn">英语朗读</a>
+            <a href="https://wordforest.cn" target="_blank" class="nav-btn">单词森林</a>
+            <a href="https://immersivetranslate.com/zh-Hans" target="_blank" class="nav-btn">沉浸式翻译</a>
 
-                        <tr>
-                            <td>6</td>
-                            <td>蓝奏云盘</td>
-                            <td>不限速、免登录；给小站提供了100兆以内的下载功能，在此感谢蓝奏云。</td>
-                            <td><a href="https://jeiii.lanzout.com" class="download-btn" target="_blank">进入</a></td>
-                        </tr>
+            <h3 class="category-title">5. AI工具</h3>
+            <a href="https://developer.nvidia.com/cuda-toolkit-archive" target="_blank" class="nav-btn">CUDA工具包档案</a>
+            <a href="https://raphael.app" target="_blank" class="nav-btn">AI图像生成</a>
+            <a href="https://www.comfy.org" target="_blank" class="nav-btn">ComfyUI</a>
+            <a href="https://runwayml.com" target="_blank" class="nav-btn">Runway</a>
 
-                        <tr>
-                            <td>7</td>
-                            <td>小飞机网盘</td>
-                            <td>不限速、免登录；给小站提供了500兆以内的下载功能，在此感谢小飞机。</td>
-                            <td><a href="https://www.feijipan.com" class="download-btn" target="_blank">进入</a></td>
-                        </tr>
+            <h3 class="category-title">6. 在线工具</h3>
+            <a href="https://www.gaituya.com" target="_blank" class="nav-btn">改图鸭</a>
+            <a href="https://www.kujiale.com" target="_blank" class="nav-btn">酷家乐</a>
+            <a href="https://tools.pdf24.org/zh" target="_blank" class="nav-btn">PDF24 工具箱</a>
+            <a href="https://temp-mail.org/zh" target="_blank" class="nav-btn">临时邮箱</a>
+            <a href="https://www.onlinemictest.com/zh/keyboard-test" target="_blank" class="nav-btn">键盘测试</a>
 
-                        <tr>
-                            <td>8</td>
-                            <td>夸克网盘</td>
-                            <td>是阿里巴巴旗下夸克团队推出的；给小站提供了大软件下载，在此感谢夸克网盘。</td>
-                            <td><a href="https://pan.quark.cn" class="download-btn" target="_blank">进入</a></td>
-                        </tr>
 
-                        <tr>
-                            <td>9</td>
-                            <td>readdy.site</td>
-                            <td>网站生成。</td>
-                            <td><a href="https://readdy.site" class="download-btn" target="_blank">进入</a></td>
-                        </tr>
+            <h3 class="category-title">7. 软件下载</h3>
+            <a href="https://www.ghxi.com" target="_blank" class="nav-btn">果核剥壳</a>
+            <a href="https://www.yutu.cn/popsoft.html" target="_blank" class="nav-btn">羽兔网</a>
+            <a href="https://www.landiannews.com" target="_blank" class="nav-btn">蓝点网</a>
+            <a href="https://www.appinn.com" target="_blank" class="nav-btn">小众软件</a>
+            <a href="https://www.dayanzai.me" target="_blank" class="nav-btn">大眼仔旭</a>
+            <a href="https://www.softwareok.com/?Download" target="_blank" class="nav-btn">开源绿软</a>
+            <a href="https://hunhepan.com/search" target="_blank" class="nav-btn">搜索网盘</a>
+            <a href="https://freefilesync.org" target="_blank" class="nav-btn">同步工具</a>
+            <a href="https://www.pdfgear.com/zh" target="_blank" class="nav-btn">PDFgear</a>
+            <a href="https://1remote.org/zh-cn" target="_blank" class="nav-btn">1Remote</a>
+            <a href="https://www.teamviewer.cn/cn/download/windows" target="_blank" class="nav-btn">TeamViewer</a>
+            <a href="https://obsproject.com" target="_blank" class="nav-btn">OBS采集</a>
+            <a href="https://www.raidrive.com" target="_blank" class="nav-btn">RaiDrive</a>
+            
+            <h3 class="category-title">8. 其它分类</h3>
+            <a href="https://www.un.org/sites/un2.un.org/files/2021/03/udhr.pdf" target="_blank" class="nav-btn">人权宣言en</a>
+            <a href="https://www.ohchr.org/sites/default/files/UDHR/Documents/UDHR_Translations/chn.pdf" target="_blank" class="nav-btn">人权宣言cn</a>
+            <a href="https://basic.smartedu.cn" target="_blank" class="nav-btn">国家中小学教育</a>
+            <a href="https://etax.sichuan.chinatax.gov.cn" target="_blank" class="nav-btn">四川税务-开票</a>
+            <a href="https://etax.chinatax.gov.cn" target="_blank" class="nav-btn">四川税务-个税</a>
+            <a href="https://www.amazon.com" target="_blank" class="nav-btn">Amazon</a>
+            <a href="https://zuixindizhi007.github.io/dyxs" target="_blank" class="nav-btn">电影先生线路</a>
 
-                    </tbody>
-                </table>
-            </div>
         </div>
-    </main>
+    </div>
+</main>
     
     <footer>
         <div class="container">
@@ -878,7 +805,7 @@
                                 <span></span>
                             </div>
                         </div>
-
+                        
                         <div class="wechat-container">
                             <a href="#"><i class="fab fa-bilibili"></i></a>
                             <div class="wechat-qrcode">
@@ -901,9 +828,9 @@
                 <div class="footer-column">
                     <h3>快速链接</h3>
                     <ul class="footer-links">
-                        <li><a href="../page2.html"><i class="fas fa-chevron-right"></i> 办公</a></li>
-                        <li><a href="../page3.html"><i class="fas fa-chevron-right"></i> 游戏</a></li>
-                        <li><a href="../page4.html"><i class="fas fa-chevron-right"></i> 更多场景</a></li>
+                        <li><a href="page2.html"><i class="fas fa-chevron-right"></i> 办公</a></li>
+                        <li><a href="page3.html"><i class="fas fa-chevron-right"></i> 游戏</a></li>
+                        <li><a href="page4.html"><i class="fas fa-chevron-right"></i> 更多场景</a></li>
                     </ul>
                 </div>
                 
@@ -918,7 +845,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2025 JEIII WinList Blog 操作系统 & 软件清单.　<a href="../index.html"><i class="fas fa-external-link-alt"></i> JEIII.CN</a>　保留所有权利.</p>
+                <p>&copy; 2025 JEIII WinList Blog 操作系统 & 软件清单.　<a href="index.html"><i class="fas fa-external-link-alt"></i> JEIII.CN</a>　保留所有权利.</p>
             </div>
         </div>
     </footer>
@@ -986,28 +913,6 @@
                 container.appendChild(element);
             }
         }
-        
-        // 搜索功能
-        const searchInput = document.getElementById('searchInput');
-        const tableRows = document.querySelectorAll('.software-table tbody tr');
-        
-        searchInput.addEventListener('input', () => {
-            const searchTerm = searchInput.value.toLowerCase();
-            
-            tableRows.forEach(row => {
-                const text = row.textContent.toLowerCase();
-                if (text.includes(searchTerm)) {
-                    row.style.display = '';
-                } else {
-                    row.style.display = 'none';
-                }
-            });
-        });
-        
-        // 导出表格功能
-        document.getElementById('exportBtn').addEventListener('click', () => {
-            alert('—— 站长穷！只能在 Github 上薅羊毛。你认为 html 有后台吗？你认为有就有吧！喜欢这个后台就多停留会儿。想要我编写的这个简洁网站：包教、包部署；费用私聊。');
-        });
         
         // 页面加载时创建浮动元素
         window.addEventListener('load', createFloatingElements);
