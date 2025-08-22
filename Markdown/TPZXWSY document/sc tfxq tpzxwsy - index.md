@@ -40,7 +40,7 @@
 1. 码上放心：[注册信息档案](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20ma%20shang%20fang%20xin.md) 
 1. 前置软件（内网）：[http://59.225.233.48:8881](http://59.225.233.48:8881/softApp.html#/about)（123456）；<a href="../../Download/datahub_win64.html" target="_blank" rel="noopener noreferrer">datahub_win64</a>、<a href="../../Download/datahub_win32.html" target="_blank" rel="noopener noreferrer">datahub_win32</a>。
 1. 光缆信息（拨打 10000；报修&自检备查）：[医院及村站光缆信息](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20two.md) 
-1. 网址收藏：[袁    伟](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20yuan%20wei.md) 
+1. 网址收藏：[袁　伟](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20yuan%20wei.md) 
 1. 网址收藏：[张朝锋](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20zhang%20chao%20feng.md) 
 1. 监控系统：[院内如何查看门卫监控？](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20three.md) 
 1. Google Chrome（实时自动更新最新版直链地址）：[64位](http://redirector.gvt1.com/edgedl/chrome/install/GoogleChromeStandaloneEnterprise64.msi)、[32位](http://redirector.gvt1.com/edgedl/chrome/install/GoogleChromeStandaloneEnterprise.msi) 
