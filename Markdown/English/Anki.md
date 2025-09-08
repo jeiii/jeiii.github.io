@@ -8,3 +8,5 @@
    - Visual Studio Code：`Anki Editor`：（在VS Code中安装）
 4. Anki 插件（其它推荐）：在主页底部增加统计小方格。
    - Review Heatmap：`1771074083`。
+5. Anki 插件（英语发音）：
+   - AwesomeTTS - Add speech to your flashcards：`1436550454`。

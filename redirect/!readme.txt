@@ -1,0 +1,3 @@
+redirect_anki：anki用户
+redirect_lzf：老庄府
+redirect_tpzxwsy：太平医院
