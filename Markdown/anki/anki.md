@@ -1,4 +1,4 @@
-# Anki 工具笔记
+# Anki 软件及插件推荐（间隔重复记忆卡）
 
 1. Anki官网：[Anki](https://apps.ankiweb.net/) 
 2. 学英语下载网页中的音频（从Edge扩展）搜索：`AIX智能下载器(图片/视频/音乐/文档)`
@@ -10,3 +10,7 @@
    - Review Heatmap：`1771074083`。
 5. Anki 插件（英语发音）：
    - AwesomeTTS - Add speech to your flashcards：`1436550454`。
+
+
+
+—— 2025.09.09 · 更新！
