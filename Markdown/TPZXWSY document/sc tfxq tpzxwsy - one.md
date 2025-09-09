@@ -74,4 +74,4 @@
 | 冷志平 | 13551203022 | 四川*卫生院       | 内科                         | 郭宇   | 18782925580 | 四川*卫生院       | 驾驶班      |
 | 史小蓉 | 13540643168 | 四川*卫生院       | 内科                         | 祝兴树 | 18200353547 | 四川*卫生院       | 驾驶班      |
 
-[--== 返回 ==--](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20index.md)
+[--== 返回 ==--](../../redirect/redirect_tpzxwsy.html)

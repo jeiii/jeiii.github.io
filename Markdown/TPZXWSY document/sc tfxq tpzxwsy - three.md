@@ -29,5 +29,4 @@
 
 ---
 
-[--== 返回 ==--](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20index.md)
-
+[--== 返回 ==--](../../redirect/redirect_tpzxwsy.html)
