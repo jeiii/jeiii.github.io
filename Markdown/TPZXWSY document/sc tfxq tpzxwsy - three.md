@@ -24,9 +24,10 @@
 ![](https://jeiii.cn/img/tpzxwsy/hikvision_5.png)
 ![](https://jeiii.cn/img/tpzxwsy/hikvision_6.png)
 
-3. 软件使用（略）。
-4. 其它问题（院内电信云电脑无法使用）。
+3. 配置更新：192.168.15.253 & 192.168.31.111（admin、abc123456）。
+4. 软件使用（略）。
+5. 其它问题（院内电信云电脑无法使用）。
 
 ---
 
-[--== 返回 ==--](../../redirect/redirect_tpzxwsy.html)
+[--== 返回 ==--](../../redirect/redirect_tpzxwsy.html) 
