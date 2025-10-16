@@ -36,7 +36,7 @@
 ## ♏ More …
 
 1. 默沙东诊疗手册：https://www.msdmanuals.cn
-1. NAC终端下载：https://10.184.45.29/nac/client/download/windowsclient.exe?ostype=windows
+1. NAC终端：https://10.184.45.29/nac/client/download/windowsclient.exe?ostype=windows（黄永建老师的党政网才能下载）
 1. 技术手册：[市平台公开的信息档案](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%202025.07.21.md) 
 1. OA 系统管理软件：[主机房服务器（DELL PowerEdge R730xd）](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20OA.md) 
 1. 码上放心：[注册信息档案](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%20ma%20shang%20fang%20xin.md) 
