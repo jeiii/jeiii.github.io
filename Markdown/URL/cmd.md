@@ -63,3 +63,7 @@
 |      Win+L | 锁定电脑     |  Win+I | 设置   |
 |      Win+P | 切屏         | Win+。 | 表情包 |
 | Win+方向键 | 分屏         |  Win+E | 此电脑 |
+
+---
+
+[--== 返回 ==--](template_1.html?md=/Markdown/Public%20document%20index.md)
