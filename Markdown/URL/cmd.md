@@ -35,11 +35,11 @@
 |                          msconfig | 系统配置                     |                services.msc | 本地服务设置       |
 | **devmgmt.msc** 或 **hdwwiz.cpl** | 设备管理器                   | **regedit** 或 **regedt32** | 注册表             |
 |                           taskmgr | 显示内存使用情况             |                    dcomcnfg | 组件服务           |
-|                          ncpa.cpl | 网络连接                     |                 lusrmgr.msc | 本地用户和组       |
-|                        fsmgmt.msc | 共享文件夹管理器             |                compmgmt.msc | 计算机管理         |
+|                          ncpa.cpl | 网络连接                     |                     taskmgr | 任务栏管理器       |
+|                       lusrmgr.msc | 本地用户和组                 |                  fsmgmt.msc | 共享文件夹管理器   |
+|                       certmgr.msc | 证书管理                     |                compmgmt.msc | 计算机管理         |
 |                          cliconfg | SQL Server客户端网络实用工具 |                    odbcad32 | ODBC数据源管理程序 |
-|                      firewall.cpl | 防火墙                       |                    iexpress | 木马捆绑工具       |
-|                        appwiz.cpl | 添加、删除程序               |                 certmgr.msc | 证书管理           |
+|                        appwiz.cpl | 添加、删除程序               |                    iexpress | 木马捆绑工具       |
 |                          desk.cpl | 系统屏幕                     |                 inetcpl.cpl | Internet选项       |
 |                          intl.cpl | 区域和语言选项               |                     joy.cpl | 游戏控制器         |
 |                          eventvwr | 事件查看器                   |                         mmc | 控制台             |
@@ -54,6 +54,7 @@
 |                          main.cpl | 鼠标                         |                     magnify | 放大镜             |
 |                           dvdplay | 播放器                       |                     mspaint | 画图               |
 |                              calc | 计算器                       |                     notepad | 记事本             |
+|                      firewall.cpl | 防火墙                       |                             |                    |
 
 ### 三、快捷键：
 

@@ -824,11 +824,17 @@
                                     <li style="color: var(--text-secondary);">
                                         装机参考：<a href="https://www.mydrivers.com/zhuanti/tianti/cpu" target="_blank" style="color: rgb(117, 100, 65); text-decoration: none;">CPU天梯图</a>、<a href="https://www.mydrivers.com/zhuanti/tianti/gpu" target="_blank" style="color: rgb(117, 100, 65); text-decoration: none;">GPU天梯图</a>、<a href="https://www.expreview.com" target="_blank" style="color: rgb(117, 100, 65); text-decoration: none;">超能网</a><br>
                                     </li>
-                                    <li style="color: var(--text-secondary);">    
-                                        Win11离线安装（Shift + F10）：<br>
-                                        方法一：taskmgr > 任务管理器 > 结束:OOBENetworkConnectionFlow.exe<br>
-                                        方法二：oobe\bypassnro.cmd > 自动重启
+
+                                    <li style="color: var(--text-secondary)">
+                                        Win11 绕过TPM2.0芯片 和 使用本地账户（Shift + F10）：<br>
+                                        —— regedit > HKEY_LOCAL_MACHINE > SYSTEM > Setup（新建 / 项 LabConfig）：<br>
+                                            ① 新建 / 32位值：BypassTPMCheck　　　　　（十六进制：1）<br>
+                                            ② 新建 / 32位值：BypassSecureBootCheck　 （十六进制：1）<br>
+                                        —— 使用本地账户，可拔掉网线绕过或使用以下方法：<br>
+                                            ❶ taskmgr > 任务管理器 > 结束对应进程 或 ncpa.cpl > 禁用网卡<br>
+                                            ❷ oobe\bypassnro.cmd > 自动重启
                                     </li>
+
                                     <li style="color: var(--text-secondary);">
                                     <span class="copyable-text" data-text="slmgr.vbs -xpr" style="cursor: pointer; color: var(--primary-color); font-weight: 500;">slmgr.vbs -xpr</span> 粘贴至命令窗口，以验证 Windows 的激活状态。
                                     </li>
