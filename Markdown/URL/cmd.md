@@ -54,7 +54,7 @@
 |                          main.cpl | 鼠标                         |                     magnify | 放大镜             |
 |                           dvdplay | 播放器                       |                     mspaint | 画图               |
 |                              calc | 计算器                       |                     notepad | 记事本             |
-|                      firewall.cpl | 防火墙                       |                             |                    |
+|                      firewall.cpl | 防火墙                       |        ipconfig /displaydns | 查看本机DNS缓存    |
 
 ### 三、快捷键：
 
