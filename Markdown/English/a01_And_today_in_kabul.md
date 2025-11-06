@@ -36,4 +36,4 @@
 
 ---
 
-[--== Back ==--](template_1.html?md=/Markdown/English/passage.md) 
+[--== 返回 ==--](redirect/redirect_anki.html)
