@@ -49,4 +49,5 @@
 1. 四川省免疫规划信息管理系统：<a href="../../Download/SecSetup.html" target="_blank" rel="noopener noreferrer">V5VPN</a>（配置移步飞书查看）。
 1. Google Chrome（实时自动更新最新版直链地址）：[64位](http://redirector.gvt1.com/edgedl/chrome/install/GoogleChromeStandaloneEnterprise64.msi)、[32位](http://redirector.gvt1.com/edgedl/chrome/install/GoogleChromeStandaloneEnterprise.msi) 
 1. 价目表：<a href="https://jeiii.cn/114" target="_blank" rel="noopener noreferrer">执行二级医院价格明细表，执行时间：2024.09.18  0:00</a> 
+1. 价目表：[四川天府新区太平中心卫生院价格公示：2025.09.23](template_1.html?md=Markdown/TPZXWSY%20document/sc%20tfxq%20tpzxwsy%20-%2000002.md)
 1. 飞书知识库空间：[TAIPING 医院 —— This is Jin Ge's work log.](https://tfxqtpzxwsy.feishu.cn/wiki/JWEMwfYzni2RbqkUZEXcqEMknMe) 
