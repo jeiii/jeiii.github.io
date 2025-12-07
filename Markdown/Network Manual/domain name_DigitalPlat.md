@@ -1,6 +1,6 @@
 # 🌎 DigitalPlat 免费域名注册示例
 
-1. 域名申请检测：https://digitalplat.org （如：域头.dpdns.org）。
+1. 域名申请检测：https://digitalplat.org （如：域头.dpdns.org；每年提前6个月免费续订）。
 1. 注册账号地址：https://dash.domain.digitalplat.org/auth/register 
    - 账号：域头j……@icloud.com；密码：No??座机后4位
    - 账号：域头y……@icloud.com；密码：No??座机后4位
