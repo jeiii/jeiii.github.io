@@ -23,8 +23,8 @@
 
 1. UUID工具：[1024Tools](https://1024tools.com/uuid)、[Online UUID Generator Tool](https://www.uuidgenerator.net/) 
 2. 快柠檬（下载小火箭）：https://flms1.online/p/downloads/ios （备用App：V2BOX）
-3. DNS泄露测试：[DNS Leak Test](https://browserleaks.com/dns)、[IP/DNS检测](https://ipleak.net)、[DNS 泄漏测试](https://dnsleaktest.com)、[Wireshark抓包工具](https://www.wireshark.org) 
-4. IP质量测试：[ping0.cc](https://ping0.cc)　[ipjiance.com](https://ipjiance.com)　[iping.cc](https://iping.cc) 
+3. IP质量测试：[ping0.cc](https://ping0.cc)　[ipjiance.com](https://ipjiance.com)　[iping.cc](https://iping.cc) 
+5. 网络隐私中的 DNS 泄漏问题：📖[Cybersecurity DNS leak](/template_1.html?md=/Markdown/Network%20Manual/Cybersecurity%20DNS%20leak_01.index.md)
 
 ---
 
