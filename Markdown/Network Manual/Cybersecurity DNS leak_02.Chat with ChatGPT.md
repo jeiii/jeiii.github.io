@@ -76,8 +76,11 @@
 必须打开：
 
 ✅ 远程 DNS / Proxy DNS
+
 ✅ DNS over HTTPS (DoH) 或 DNS over TLS (DoT)
+
 ✅ FakeIP / Encrypted DNS（如果有）
+
 ❌ 禁用「使用系统 DNS」
 
 如果你用 Shadowrocket，推荐这样：
@@ -103,8 +106,10 @@
 ### ✅ 推荐工具
 
 👉 [https://dnsleaktest.com](https://dnsleaktest.com/)
- 👉 [https://ipleak.net](https://ipleak.net/)
- 👉 https://browserleaks.com/dns
+
+👉 [https://ipleak.net](https://ipleak.net/)
+
+👉 https://browserleaks.com/dns
 
 如果你看到的「DNS 服务器地址」是：
 
@@ -112,8 +117,7 @@
 - NextDNS ✅
    就说明没有泄露
 
-如果还是本地运营商的 IP ❌
- 那就是有 DNS 泄露
+如果还是本地运营商的 IP ❌ 那就是有 DNS 泄露
 
 ------
 
@@ -122,7 +126,9 @@
 如果你不想折腾，我最推荐你这个组合：
 
 ✅ Shadowrocket（或 sing-box）
+
 ✅ + NextDNS
+
 ✅ + Proxy DNS 打开
 
 等于：
@@ -136,6 +142,7 @@
 如果你愿意，我可以下一步帮你：
 
 ✅ 按你的设备（iPhone / Windows / Android / 路由器）
+
 ✅ 给你一份「防 DNS 泄露的最佳配置图文教程」
 
 你现在主要在哪个设备上用？

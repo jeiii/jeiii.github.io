@@ -1,10 +1,10 @@
 # 🍏 苹果ID信息档案
 
-> —— je * q.com、37 * q.com
+> —— j * @icloud.com
 
-- 管理你的 Apple 账户：https://account.apple.com
+- 管理你的 Apple 账户：https://account.apple.com　[地址生成1](https://addressgenerator.top/zh)　[地址生成2](https://www.meiguodizhi.com) 
 
-## 美区ID
+## 美区ID 
 
 1. 付款方式：无
 2. 姓名：*
