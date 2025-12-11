@@ -4,9 +4,9 @@
 >
 
 1. 教程视频下载（备份）工具：[Free Download Manager](https://www.freedownloadmanager.org) （在设置选项中增加浏览器集成）、[Python扩展：elephant.fda](https://github.com/meowcateatrat/elephant/releases/tag/1.2.0) （在设置扩展中从文件安装）。
-2. 基础准备：[随机信息](template_1.html?md=/Markdown/Network%20Manual/Apple%20ID.md)、[玩机笔记](template_1.html?md=/Markdown/Network%20Manual/Apple%20Notes.md)、[IPv6测试](https://www.test-ipv6.com)、[测速网](https://www.speedtest.cn)、[Ping](https://www.itdog.cn)、[银河录像局](https://nf.video)、[住宅IP](https://www.onesproxy.cn/)、[MyIP](https://www.myip.com/)、[DNSPod](https://www.dnspod.cn)、[爱快云](https://yun.ikuai8.com/#/login)。
+2. 基础准备：[随机信息](template_1.html?md=/Markdown/Network%20Manual/Apple_01.ID.md)、[玩机笔记](template_1.html?md=/Markdown/Network%20Manual/Apple_02.Notes.md)、[IPv6测试](https://www.test-ipv6.com)、[测速网](https://www.speedtest.cn)、[Ping](https://www.itdog.cn)、[银河录像局](https://nf.video)、[住宅IP](https://www.onesproxy.cn/)、[MyIP](https://www.myip.com/)、[DNSPod](https://www.dnspod.cn)、[爱快云](https://yun.ikuai8.com/#/login)。
 3. 接码（实体号码）平台：[5SIM](https://5sim.net)、[SMS-Activate](https://sms-activate.io)、[号码实虚检测](https://www.ipqualityscore.com/user/search)。
-4. 免费域名：[DigitalPlat](template_1.html?md=/Markdown/Network%20Manual/domain%20name_DigitalPlat.md)　[DNSHE](template_1.html?md=/Markdown/Network%20Manual/domain%20name_DNSHE.md)　[netlibre](template_1.html?md=/Markdown/Network%20Manual/domain%20name_netlibre.md)　托管平台 Cloudflare 官网：[www.cloudflare.com](http://www.cloudflare.com/) （Apple ID 登录）　域名来源查询：[全球](https://lookup.icann.org/zh)、[大陆](https://whoiscx.com/)。
+4. 免费域名：[DigitalPlat](template_1.html?md=/Markdown/Network%20Manual/domain%20name_01.DigitalPlat.md)　[DNSHE](template_1.html?md=/Markdown/Network%20Manual/domain%20name_02.DNSHE.md)　[netlibre](template_1.html?md=/Markdown/Network%20Manual/domain%20name_03.netlibre.md)　托管平台 Cloudflare 官网：[www.cloudflare.com](http://www.cloudflare.com/) （Apple ID 登录）　域名来源查询：[全球](https://lookup.icann.org/zh)、[大陆](https://whoiscx.com/)。
 
 ---
 
