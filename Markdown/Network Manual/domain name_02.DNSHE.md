@@ -3,7 +3,7 @@
 ### 一、DNSHE 域名：
 
 1. 视频教程地址：https://www.youtube.com/watch?v=AQLLGsnxr9c （目前只有 **de5.net** 支持 Cloudflare）。
-1. 域名申请地址：https://my.dnshe.com （je*@icloud.com　d-内秘）
+1. 域名申请地址：https://my.dnshe.com　邀请码：`FYCBF3B032`　（`je*@icloud.com　us*er@gmail.com　整域`）
 
 
 ### 二、ZoneABC 域名：
