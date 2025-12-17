@@ -10,9 +10,25 @@
        - 进入创建的⚙️ > 绑定KV命名空间:变量名称 ⌨️ `KV` ；选择KV命名空间 > 绑定。
        - ⚙️ > 设置 > 添加·域和路由 > 自定义域 > 在已有域名前加前缀 > 添加域。
    - 2️⃣ ⚙️ > 编辑代码 > 删除原有代码 > 复制 CM 的项目代码（选择：_workers.js）> 部署。
-   
+
      > 可选项：JavaScript Obfuscator 代码混淆：[obfuscator.io](https://obfuscator.io) （混淆后速度会变慢，但不易被封）。
 3. 获取：用生成的有前缀的域名 + 斜杠`/` + `ADMIN` = 进入订阅后台。
+
+   -  优选订阅地址：
+
+     ```
+     Cm.Soso.Edu.Kg
+     Sub.Cmliussss.Net
+     Owo.O00o.Ooo
+     ```
+   
+   -   PROXYIP 订阅:
+
+      ```
+      ProxyIP.US.CMLiussss.Net
+      ProxyIP.SG.CMLiussss.Net
+      ProxyIP.JP.CMLiussss.Net
+      ```
 
 
 　
