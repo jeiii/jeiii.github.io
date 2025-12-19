@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <!-- 引入Markdown解析库 -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         :root {
             /* 浅色主题变量 */
@@ -46,16 +46,13 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        .markdown-content * {
-            transition: none !important;
+            transition: background-color 0.5s ease, color 0.3s ease, border-color 0.5s ease;
         }
 
         body {
             font-family: 'Noto Sans SC', sans-serif;
             background: linear-gradient(var(--overlay-color), var(--overlay-color)), 
-            url('https://jeiii.cn/img/998.jpg') no-repeat center center fixed;
+                        url('https://jeiii.cn/img/998.jpg') no-repeat center center fixed;
             background-size: cover;
             color: var(--text-primary);
             min-height: 100vh;
@@ -944,82 +941,79 @@
         function loadMarkdownContent() {
             const urlParams = new URLSearchParams(window.location.search);
             let mdFile = urlParams.get('md');
-            if (!mdFile) return;
-
-            mdFile = decodeURIComponent(mdFile);
-            const cacheKey = 'md_cache_' + mdFile;
-            const cacheTimeKey = cacheKey + '_time';
-            const CACHE_TTL = 1000 * 60 * 10; // 10分钟
-
-            const contentDiv = document.getElementById('markdownContent');
-
-            // 👉 1. 先读缓存
-            const cached = localStorage.getItem(cacheKey);
-            const cachedTime = localStorage.getItem(cacheTimeKey);
-
-            if (cached && cachedTime && Date.now() - cachedTime < CACHE_TTL) {
-                contentDiv.innerHTML = cached;
-                return;
-            }
-
-            // 👉 2. 再网络请求
-            contentDiv.innerHTML = '<div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i> 加载中...</div>';
-
-            fetch(mdFile)
-                .then(res => res.text())
-                .then(text => {
-                    const html = marked.parse(text);
-                    contentDiv.innerHTML = html;
-
-                    // ✅ 仅处理 Markdown 内容中的链接
-                    contentDiv.querySelectorAll('a[href]').forEach(link => {
-                        const href = link.getAttribute('href');
-                        if (!href) return;
-
-                        // 跳过锚点
-                        if (href.startsWith('#')) return;
-
-                        // 外链：新窗口
-                        if (
-                            href.startsWith('http://') ||
-                            href.startsWith('https://') ||
-                            href.startsWith('//')
-                        ) {
-                            link.target = '_blank';
-                            link.rel = 'noopener noreferrer';
-                            return;
+            
+            if (mdFile) {
+                // 处理中文路径编码问题
+                mdFile = decodeURIComponent(mdFile);
+                
+                // 添加错误处理和加载状态
+                const contentDiv = document.getElementById('markdownContent');
+                contentDiv.innerHTML = '<div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i> 加载中...</div>';
+                
+                // 设置超时控制
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 10000); // 10秒超时
+                
+                fetch(mdFile, { signal: controller.signal })
+                    .then(response => {
+                        clearTimeout(timeoutId);
+                        if (!response.ok) {
+                            throw new Error(`HTTP错误! 状态码: ${response.status}`);
                         }
-
-                        // 非 md 文件不处理（如 html / pdf）
-                        if (!href.toLowerCase().endsWith('.md')) return;
-
-                        // 已经是 ?md= 的不重复处理
-                        if (href.includes('?md=')) return;
-
-                        // 👉 相对 md → 自动补 ?md=
-                        const encoded = encodeURIComponent(href);
-                        link.href = `?md=${encoded}`;
+                        // 检查内容类型
+                        const contentType = response.headers.get('content-type');
+                        if (!contentType || !contentType.includes('text/markdown') && !contentType.includes('text/plain')) {
+                            console.warn('响应可能不是Markdown文件，内容类型:', contentType);
+                        }
+                        return response.text();
+                    })
+                    .then(text => {
+                        contentDiv.innerHTML = marked.parse(text);
+                        
+                        // 确保所有链接在新标签页打开
+                        contentDiv.querySelectorAll('a').forEach(link => {
+                            if (link.hostname !== window.location.hostname) {
+                                link.target = '_blank';
+                                link.rel = 'noopener noreferrer';
+                            }
+                        });
+                    })
+                    .catch(error => {
+                        clearTimeout(timeoutId);
+                        console.error('加载Markdown失败:', error);
+                        contentDiv.innerHTML = `
+                            <div class="error-message">
+                                <h1>加载内容失败</h1>
+                                <p><i class="fas fa-exclamation-triangle"></i> 无法加载请求的Markdown文件: ${escapeHtml(mdFile)}</p>
+                                <p>错误信息: ${escapeHtml(error.message)}</p>
+                                <p>请检查文件路径是否正确或联系管理员。</p>
+                                <button onclick="location.reload()" class="btn btn-primary">
+                                    <i class="fas fa-sync-alt"></i> 重新加载
+                                </button>
+                            </div>
+                        `;
                     });
-
-                    // 缓存
-                    localStorage.setItem(cacheKey, html);
-                    localStorage.setItem(cacheTimeKey, Date.now());
-                })
-
-                .catch(err => {
-                    contentDiv.innerHTML = '<p>Markdown 加载失败</p>';
-                    console.error(err);
-                });
+            } else {
+                document.getElementById('markdownContent').innerHTML = `
+                    <div class="default-content">
+                        <h1>此页为：调用 Markdown 文档内容的模板页面！（版本：1）</h1>
+                        <p>—— 请通过 URL 参数指定要加载的 Markdown 文档，例如：template_1.html?md=/Markdown/example.md</p>
+                        <div class="example-links">
+                            <h3>示例链接：</h3>
+                            <ul>
+                                <li><a href="?md=/Markdown/Public%20document%20index.md"><i class="fa-brands fa-markdown"></i> 公共文档</a></li>
+                                <li><a href="?md=/Markdown/Public%20document/Encapsulate%20the%20operating%20system.md"><i class="fa-brands fa-markdown"></i> 系统封装</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                `;
+            }
         }
-
         
         // 页面加载时执行
-        document.addEventListener('DOMContentLoaded', () => {
-            loadMarkdownContent();   // 先加载正文
-        });
-
         window.addEventListener('load', () => {
-            createFloatingElements(); // 特效最后再来
+            createFloatingElements();
+            loadMarkdownContent();
         });
     </script>
 </body>
