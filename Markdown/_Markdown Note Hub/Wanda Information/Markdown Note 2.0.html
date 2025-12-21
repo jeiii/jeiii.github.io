@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>万达·番外笔记</title>
+  <title>Markdown 笔记</title>
 
   <!-- 字体 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -249,11 +249,11 @@
   <aside class="sidebar">
     <div class="sidebar-header">
       <button class="theme-toggle" id="themeToggle">🌙 暗黑</button>
-      <h1>📓 万达·番外笔记</h1>
+      <h1>📓 Markdown 笔记</h1>
       <p>记录学习 · 思考 · 成长</p>
     </div>
 
-    <nav class="sidebar-nav"></nav> <!--左侧目录在 “docs.json” 中-->
+<nav class="sidebar-nav"></nav> <!--左侧目录在 “docs.json” 中-->
 
   </aside>
 
@@ -269,8 +269,18 @@
   const sidebarNav = document.querySelector(".sidebar-nav");
 
   async function loadMarkdown(file) {
-    const res = await fetch(file);
-    postEl.innerHTML = marked.parse(await res.text());
+    try {
+      const res = await fetch(file);
+      if (!res.ok) throw new Error("404");
+
+      postEl.innerHTML = marked.parse(await res.text());
+    } catch (e) {
+      postEl.innerHTML = `
+        <h2>404</h2>
+        <p>文档不存在或加载失败：</p>
+        <pre>${file}</pre>
+      `;
+    }
 
     // ✅ 所有链接，在新标签打开
     postEl.querySelectorAll("a").forEach(a => {
@@ -355,9 +365,8 @@ function renderNav(data) {
   return html;
 }
 
-
   // 页面加载时生成侧边栏
-  buildSidebar();  
+  buildSidebar();
 </script>
 
 </body>
