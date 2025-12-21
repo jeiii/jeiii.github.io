@@ -253,24 +253,8 @@
       <p>记录学习 · 思考 · 成长</p>
     </div>
 
-    <nav class="sidebar-nav">
-      <a href="#" data-md="homepage.md">🏠 首页</a>
+    <nav class="sidebar-nav"></nav> <!--左侧目录在 “docs.json” 中-->
 
-      <details open>
-        <summary>📁 前端笔记</summary>
-        <a href="#" data-md="frontend/html.md">HTML</a>
-        <a href="#" data-md="frontend/css.md">CSS</a>
-        <a href="#" data-md="frontend/js.md">JavaScript</a>
-      </details>
-
-      <details>
-        <summary>📁 后端笔记</summary>
-        <a href="#" data-md="backend/node.md">Node.js</a>
-        <a href="#" data-md="backend/db.md">数据库</a>
-      </details>
-
-      <a href="#" data-md="about.md">👤 关于我</a>
-    </nav>
   </aside>
 
   <main class="content">
@@ -328,6 +312,52 @@
   setTheme(localStorage.getItem("theme") || "light");
   toggleBtn.onclick = () =>
     setTheme(html.dataset.theme === "dark" ? "light" : "dark");
+
+  async function buildSidebar() {
+    try {
+      const res = await fetch("docs.json");
+      if (!res.ok) return;
+
+      const data = await res.json();
+      sidebarNav.innerHTML = renderNav(data);
+    } catch (e) {
+      console.warn("无法生成侧边栏", e);
+    }
+  }
+
+function renderNav(data) {
+  let html = "";
+
+  for (const title in data) {
+    const value = data[title];
+
+    // 单文件
+    if (typeof value === "string") {
+      html += `<a href="#" data-md="${value}">${title}</a>`;
+    }
+    // 分组
+    else {
+      const isOpen = value._open === true;
+      html += `
+        <details ${isOpen ? "open" : ""}>
+          <summary>${title}</summary>
+          ${Object.entries(value)
+            .filter(([k]) => k !== "_open")
+            .map(
+              ([name, path]) =>
+                `<a href="#" data-md="${path}">${name}</a>`
+            )
+            .join("")}
+        </details>
+      `;
+    }
+  }
+  return html;
+}
+
+
+  // 页面加载时生成侧边栏
+  buildSidebar();  
 </script>
 
 </body>
