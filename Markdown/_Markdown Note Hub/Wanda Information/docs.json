@@ -1,17 +1,17 @@
 {
   "🏠 首页": "homepage.md",
 
-  "📁 前端笔记": {
+  "📁 下载安装": {
     "_open": true,
-    "HTML": "html.md",
-    "CSS": "css.md",
-    "JavaScript": "js.md"
+    "下载无提示": "quiet.md",
+    "允许下载": "allow.md",
+    "安装方式": "setup.md"
   },
 
-  "📁 后端笔记": {
+  "📁 常见问题": {
     "_open": false,
-    "Node.js": "node.md",
-    "数据库": "db.md"
+    "本地参数": "local.md",
+    "挂号排号": "register.md"
   },
 
   "👤 关于我": "about.md"
