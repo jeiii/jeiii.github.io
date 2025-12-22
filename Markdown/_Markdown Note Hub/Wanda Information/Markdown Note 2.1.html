@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Markdown 笔记</title>
+  <title>万达 · 番外笔记 太平专区</title>
 
   <!-- 字体 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -181,9 +181,10 @@
     /* =====================
        ☰ 按钮
        ===================== */
-    .menu-toggle {
-      display: none;
-    }
+      .menu-toggle {
+        visibility: hidden;
+        pointer-events: none;
+      }
 
     /* =====================
        移动端
@@ -197,16 +198,8 @@
       }
 
       .menu-toggle {
-        display: block;
-        position: fixed;
-        top: 16px;
-        left: 16px;
-        z-index: 1100;
-        font-size: 20px;
-        padding: 6px 10px;
-        border-radius: 8px;
-        border: 1px solid var(--border-color);
-        background: var(--bg-card);
+        visibility: visible;
+        pointer-events: auto;
       }
 
       .sidebar {
@@ -249,28 +242,12 @@
   <aside class="sidebar">
     <div class="sidebar-header">
       <button class="theme-toggle" id="themeToggle">🌙 暗黑</button>
-      <h1>📓 Markdown 笔记</h1>
-      <p>记录学习 · 思考 · 成长</p>
+      <h1>📓 万达·番外笔记</h1>
+      <p>少转圈圈 · 杜绝加班 · 薪水翻翻</p>
     </div>
 
-    <nav class="sidebar-nav">
-      <a href="#" data-md="homepage.md">🏠 首页</a>
+<nav class="sidebar-nav"></nav> <!--左侧目录在 “docs.json” 中-->
 
-      <details open>
-        <summary>📁 前端笔记</summary>
-        <a href="#" data-md="html.md">HTML</a>
-        <a href="#" data-md="css.md">CSS</a>
-        <a href="#" data-md="js.md">JavaScript</a>
-      </details>
-
-      <details>
-        <summary>📁 后端笔记</summary>
-        <a href="#" data-md="node.md">Node.js</a>
-        <a href="#" data-md="db.md">数据库</a>
-      </details>
-
-      <a href="#" data-md="about.md">👤 关于我</a>
-    </nav>
   </aside>
 
   <main class="content">
@@ -338,6 +315,57 @@
   setTheme(localStorage.getItem("theme") || "light");
   toggleBtn.onclick = () =>
     setTheme(html.dataset.theme === "dark" ? "light" : "dark");
+
+  async function buildSidebar() {
+    try {
+      const res = await fetch("docs.json");
+      if (!res.ok) return;
+
+      const data = await res.json();
+      sidebarNav.innerHTML = renderNav(data);
+    } catch (e) {
+      console.warn("无法生成侧边栏", e);
+    }
+  }
+
+function renderNav(data) {
+  let html = "";
+
+  for (const title in data) {
+    const value = data[title];
+
+    // 单文件
+    if (typeof value === "string") {
+      html += `<a href="#" data-md="${value}">${title}</a>`;
+    }
+    // 分组
+    else {
+      const isOpen = value._open === true;
+      html += `
+        <details ${isOpen ? "open" : ""}>
+          <summary>${title}</summary>
+          ${Object.entries(value)
+            .filter(([k]) => k !== "_open")
+            .map(
+              ([name, path]) =>
+                `<a href="#" data-md="${path}">${name}</a>`
+            )
+            .join("")}
+        </details>
+      `;
+    }
+  }
+  return html;
+}
+
+  // 页面加载时生成侧边栏
+  buildSidebar();
+
+  if (window.innerWidth <= 768) {
+    menuToggle.style.visibility = "visible";
+    menuToggle.style.pointerEvents = "auto";
+  }  
+
 </script>
 
 </body>
