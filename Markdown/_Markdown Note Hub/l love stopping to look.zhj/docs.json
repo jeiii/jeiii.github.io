@@ -1,0 +1,18 @@
+{
+  "🏠 首页": "homepage.md",
+
+  "📁 前端笔记": {
+    "_open": true,
+    "HTML": "html.md",
+    "CSS": "css.md",
+    "JavaScript": "js.md"
+  },
+
+  "📁 后端笔记": {
+    "_open": false,
+    "Node.js": "node.md",
+    "数据库": "db.md"
+  },
+
+  "👤 关于我": "about.md"
+}
