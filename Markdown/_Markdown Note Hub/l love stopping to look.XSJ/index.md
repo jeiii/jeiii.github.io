@@ -4,3 +4,4 @@
 
 - AI：
 - web：
+- [理光复印机](/template_1.html?md=/Markdown/handbook/RICOH%20MP%20C5503.md)
