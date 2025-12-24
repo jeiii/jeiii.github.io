@@ -1,22 +1,6 @@
-# 🦋 · Homepage AI导航专区
+# 🏠 · Homepage 首页优选
 
 1. [Gemini · Nano Banana](https://gemini.google.com)
-
- ```
- 将照片中的人，作一张专业的形象照，像在专业摄影棚拍摄一样，穿灰色西装。
- ```
-
-2. [ChatGPT](https://chatgpt.com)
-   
-```
-请帮我进行证件照修图，要求如下：
-- 保留真实五官和个人特征，不要过度美颜
-- 调整为自然、健康的肤色
-- 轻微磨皮，保留皮肤质感
-- 去除痘痘、黑眼圈和轻微瑕疵
-- 面部光线均匀、立体
-- 背景改为【蓝色 / 白色 / 红色】纯色
-- 整体风格正式、干净，符合证件照标准
-```
-
-​     
+2. [ChatGPT](https://chatgpt.com)   
+3. [Odoo | 开源企业资源管理及客户关系系统](https://www.odoo.com/zh_CN)
+4. [DeepL翻译：全世界最准确的翻译](https://www.deepl.com/zh/translator)

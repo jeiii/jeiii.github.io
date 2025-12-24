@@ -1,17 +1,16 @@
 {
   "🏠 首页": "homepage.md",
 
-  "📁 前端笔记": {
+  "📁 人工智能": {
     "_open": true,
-    "HTML": "html.md",
-    "CSS": "css.md",
-    "JavaScript": "js.md"
+    "ChatGPT": "ChatGPT.md",
+    "Gemini · Nano Banana": "Gemini · Nano Banana.md"
   },
 
-  "📁 后端笔记": {
+  "📁 设备维修": {
     "_open": false,
-    "Node.js": "node.md",
-    "数据库": "db.md"
+    "复印机": "RICOH MP C5503.md",
+    "打印机": "printer.md"
   },
 
   "👤 关于我": "about.md"
