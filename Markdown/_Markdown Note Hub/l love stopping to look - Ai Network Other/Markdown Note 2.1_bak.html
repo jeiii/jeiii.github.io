@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>工作笔记</title>
+  <title>Markdown 笔记</title>
 
   <!-- 字体 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,6 +48,36 @@
       font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
       background: var(--bg-main);
       color: var(--text-main);
+    }
+
+    /* =====================
+      代码块复制按钮
+      ===================== */
+    .post pre {
+      position: relative;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      padding: 4px 10px;
+      font-size: 12px;
+      border: none;
+      border-radius: 6px;
+      background: rgba(0,0,0,.55);
+      color: #fff;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity .2s ease;
+    }
+
+    .post pre:hover .copy-btn {
+      opacity: 1;
+    }
+
+    html[data-theme="dark"] .copy-btn {
+      background: rgba(255,255,255,.15);
     }
 
     /* =====================
@@ -249,8 +279,8 @@
   <aside class="sidebar">
     <div class="sidebar-header">
       <button class="theme-toggle" id="themeToggle">🌙 暗黑</button>
-      <h1>📓 工作笔记</h1>
-      <p>实践总结 · 思考 · 成长</p>
+      <h1>📓 Markdown 笔记</h1>
+      <p>记录学习 · 思考 · 成长</p>
     </div>
 
 <nav class="sidebar-nav"></nav> <!--左侧目录在 “docs.json” 中-->
@@ -281,6 +311,27 @@
         <pre>${file}</pre>
       `;
     }
+
+    // ✅ 给所有代码块加“复制”按钮
+    postEl.querySelectorAll("pre > code").forEach(code => {
+      const pre = code.parentElement;
+
+      // 防止重复添加
+      if (pre.querySelector(".copy-btn")) return;
+
+      const btn = document.createElement("button");
+      btn.className = "copy-btn";
+      btn.textContent = "复制";
+
+      btn.onclick = () => {
+        navigator.clipboard.writeText(code.innerText).then(() => {
+          btn.textContent = "已复制";
+          setTimeout(() => (btn.textContent = "复制"), 1500);
+        });
+      };
+
+      pre.appendChild(btn);
+    });
 
     // ✅ 所有链接，在新标签打开
     postEl.querySelectorAll("a").forEach(a => {

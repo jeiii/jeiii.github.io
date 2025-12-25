@@ -1,0 +1,21 @@
+{
+  "🏠 Home": "homepage.md",
+
+  "📁 AI model": {
+    "_open": true,
+    "ChatGPT": "ChatGPT.md",
+    "Gemini · Nano Banana": "Gemini · Nano Banana.md"
+  },
+
+    "📁 Network Manual": {
+    "_open": false,
+    "yongge": "yongge.md"
+  },
+
+  "📁 to Repair": {
+    "_open": false,
+    "Copier": "RICOH MP C5503.md"
+  },
+
+  "👤 About": "about.md"
+}
